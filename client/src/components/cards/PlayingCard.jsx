@@ -50,7 +50,7 @@ export function getCardAltText(card, isFaceDown = false) {
 
 const SIZE_CLASSES = {
   sm: 'w-8 sm:w-10 aspect-[5/7] rounded-md',
-  md: 'w-[42px] xs:w-[48px] sm:w-[68px] md:w-[78px] aspect-[5/7] rounded-md sm:rounded-xl',
+  md: 'w-[56px] xs:w-[64px] sm:w-[68px] md:w-[78px] aspect-[5/7] rounded-md sm:rounded-xl',
   lg: 'w-16 sm:w-22 md:w-28 aspect-[5/7] rounded-xl',
   trick: 'w-[32px] sm:w-[44px] md:w-[52px] aspect-[5/7] rounded-md sm:rounded-lg'
 };

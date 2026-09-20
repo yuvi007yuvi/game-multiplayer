@@ -166,15 +166,15 @@ export function HandFan({
   // Keeps all 13 cards cleanly visible on 360px-390px mobile screens without clipping!
   const getOverlapClass = (count) => {
     if (count <= 4) return 'space-x-1 sm:space-x-2 md:space-x-3';
-    if (count <= 7) return '-space-x-2 sm:-space-x-4 md:-space-x-5';
-    if (count <= 10) return '-space-x-4 sm:-space-x-6 md:-space-x-8';
-    return '-space-x-5 sm:-space-x-7 md:-space-x-9'; // 11-13 cards
+    if (count <= 7) return '-space-x-3 sm:-space-x-4 md:-space-x-5';
+    if (count <= 10) return '-space-x-5 sm:-space-x-6 md:-space-x-8';
+    return '-space-x-6 sm:-space-x-7 md:-space-x-9'; // 11-13 cards
   };
 
   const overlapClass = getOverlapClass(cards.length);
 
   return (
-    <div className="relative w-full flex flex-col items-center select-none pt-0.5 pb-0.5 sm:pb-1 landscape:scale-[0.82] landscape:origin-bottom">
+    <div className="relative w-full flex flex-col items-center select-none pt-0.5 pb-0.5 sm:pb-1 landscape:pt-0 landscape:pb-0">
       {/* Floating Swipe Play Drop Zone Indicator */}
       {dragState && (
         <div

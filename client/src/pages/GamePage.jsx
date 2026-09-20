@@ -91,203 +91,266 @@ export function GamePage({
   };
 
   return (
-    <div className="relative w-full h-[calc(100dvh-48px)] sm:h-[calc(100vh-56px)] landscape:h-[calc(100dvh-36px)] max-h-[calc(100dvh-48px)] sm:max-h-[calc(100vh-56px)] landscape:max-h-[calc(100dvh-36px)] flex flex-col justify-between select-none overflow-hidden pb-0.5 sm:pb-1">
-      {/* Game Table Info Bar (Slim) */}
-      <div className="w-full max-w-5xl mx-auto px-2 sm:px-4 py-0.5 sm:py-1 flex items-center justify-between text-xs sm:text-sm font-semibold shrink-0">
-        {/* Left: Round & Trick info */}
-        <div className="flex items-center gap-1.5 sm:gap-2">
-          <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2 sm:px-3 py-0.5 rounded-full font-mono text-[10px] sm:text-xs">
-            Round <span className="text-amber-400 font-bold">{round}</span> / {totalRounds}
-          </span>
-          <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2 sm:px-3 py-0.5 rounded-full font-mono text-[10px] sm:text-xs">
-            Trick <span className="text-amber-400 font-bold">{trickNumber}</span> / 13
-          </span>
+    <div className="relative w-full h-[calc(100dvh-48px)] sm:h-[calc(100vh-56px)] landscape:h-[calc(100dvh-36px)] max-h-[calc(100dvh-48px)] sm:max-h-[calc(100vh-56px)] landscape:max-h-[calc(100dvh-36px)] select-none overflow-hidden
+      flex flex-col landscape:flex-row landscape:items-stretch">
+
+      {/* ── PORTRAIT top info bar / LANDSCAPE left column ── */}
+      {/* In portrait: slim bar at top. In landscape: left column = full table */}
+      <div className="
+        landscape:flex-1 landscape:min-w-0 landscape:flex landscape:flex-col landscape:justify-between landscape:py-1 landscape:px-1
+        flex flex-col
+      ">
+        {/* Game Table Info Bar */}
+        <div className="w-full max-w-5xl mx-auto px-2 sm:px-4 py-0.5 sm:py-1 landscape:py-0.5 flex items-center justify-between text-xs sm:text-sm font-semibold shrink-0">
+          {/* Left: Round & Trick info */}
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2 sm:px-3 py-0.5 rounded-full font-mono text-[10px] sm:text-xs">
+              Round <span className="text-amber-400 font-bold">{round}</span> / {totalRounds}
+            </span>
+            <span className="bg-slate-900 border border-slate-800 text-slate-300 px-2 sm:px-3 py-0.5 rounded-full font-mono text-[10px] sm:text-xs">
+              Trick <span className="text-amber-400 font-bold">{trickNumber}</span> / 13
+            </span>
+          </div>
+
+          {/* Center: Spades Trump Badge */}
+          <div className="hidden sm:flex landscape:hidden items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-xs font-extrabold uppercase tracking-wider shadow-sm">
+            <span className="text-base text-amber-400 leading-none">♠</span>
+            <span>Spades are Trump</span>
+          </div>
+
+          {/* Right: Fullscreen + Scores */}
+          <div className="flex items-center gap-1.5">
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              className="sm:hidden flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] transition-colors active:scale-90"
+              title={isFullscreen ? 'Exit Fullscreen' : 'Landscape Fullscreen'}
+            >
+              {isFullscreen ? <Minimize2 size={11} className="text-amber-400" /> : <Maximize2 size={11} className="text-amber-400" />}
+              <span>{isFullscreen ? 'Exit' : 'Full'}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowScoreboard(!showScoreboard)}
+              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] sm:text-xs transition-colors"
+            >
+              <Award size={12} className="text-amber-400" />
+              <span>Scores</span>
+            </button>
+          </div>
         </div>
 
-        {/* Center: Spades Trump Badge */}
-        <div className="hidden sm:flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-xs font-extrabold uppercase tracking-wider shadow-sm">
-          <span className="text-base text-amber-400 leading-none">♠</span>
-          <span>Spades are Trump</span>
-        </div>
+        {/* Main Oval Table Felt Surface */}
+        <div className="relative flex-1 min-h-0 w-full max-w-5xl mx-auto px-1 sm:px-6 landscape:px-1 flex items-center justify-center my-0.5 landscape:my-0">
+          <div className="relative w-full h-full max-h-[290px] landscape:max-h-none sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 landscape:p-1.5 shadow-table flex flex-col justify-between items-center">
+            {/* Felt Inner Surface */}
+            <div className="relative w-full h-full rounded-[26px] sm:rounded-[34px] felt-surface p-1 sm:p-2 landscape:p-1 flex flex-col justify-between items-center border border-felt-border">
 
-        {/* Right: Fullscreen toggle (mobile only) + Scoreboard */}
-        <div className="flex items-center gap-1.5">
-          <button
-            type="button"
-            onClick={toggleFullscreen}
-            className="sm:hidden flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] transition-colors active:scale-90"
-            title={isFullscreen ? 'Exit Fullscreen' : 'Landscape Fullscreen'}
-          >
-            {isFullscreen ? <Minimize2 size={11} className="text-amber-400" /> : <Maximize2 size={11} className="text-amber-400" />}
-            <span>{isFullscreen ? 'Exit' : 'Full'}</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowScoreboard(!showScoreboard)}
-            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] sm:text-xs transition-colors"
-          >
-            <Award size={12} className="text-amber-400" />
-            <span>Scores</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Main Oval Table Felt Surface (Auto-flexing to screen height) */}
-      <div className="relative flex-1 min-h-0 w-full max-w-5xl mx-auto px-1 sm:px-6 flex items-center justify-center my-0.5">
-        <div className="relative w-full h-full max-h-[290px] landscape:max-h-[185px] landscape:sm:max-h-[340px] sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 shadow-table flex flex-col justify-between items-center">
-          {/* Felt Inner Surface */}
-          <div className="relative w-full h-full rounded-[26px] sm:rounded-[34px] felt-surface p-1 sm:p-2 flex flex-col justify-between items-center border border-felt-border">
-
-            {/* North Opponent Seat (Top) */}
-            <div className="w-full flex justify-center z-10">
-              <PlayerSeat
-                player={northPlayer}
-                isCurrentTurn={northPlayer && northPlayer.seatIndex === currentTurn}
-                position="north"
-                turnDeadline={gameState.turnDeadline}
-                turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
-                activeEmote={northPlayer ? activeEmotes[northPlayer.seatIndex] : null}
-              />
-            </div>
-
-            {/* Middle Row: West Seat, Center Trick, East Seat */}
-            <div className="w-full flex items-center justify-between px-1 sm:px-4 z-10">
-              {/* West Opponent (Left) */}
-              <div className="w-13 landscape:w-28 sm:w-36 flex justify-start shrink-0">
+              {/* North Opponent Seat (Top) */}
+              <div className="w-full flex justify-center z-10">
                 <PlayerSeat
-                  player={westPlayer}
-                  isCurrentTurn={westPlayer && westPlayer.seatIndex === currentTurn}
-                  position="west"
+                  player={northPlayer}
+                  isCurrentTurn={northPlayer && northPlayer.seatIndex === currentTurn}
+                  position="north"
                   turnDeadline={gameState.turnDeadline}
                   turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
-                  activeEmote={westPlayer ? activeEmotes[westPlayer.seatIndex] : null}
+                  activeEmote={northPlayer ? activeEmotes[northPlayer.seatIndex] : null}
                 />
               </div>
 
-              {/* Center Trick Arena */}
-              <div className="flex-1 flex justify-center">
-                <TrickCenter
-                  currentTrick={currentTrick}
-                  lastTrick={lastTrick}
-                  seats={seats}
-                  mySeatIndex={mySeatIndex}
-                />
+              {/* Middle Row: West Seat, Center Trick, East Seat */}
+              <div className="w-full flex items-center justify-between px-1 sm:px-4 landscape:px-0.5 z-10">
+                {/* West Opponent (Left) */}
+                <div className="w-13 sm:w-36 landscape:w-20 flex justify-start shrink-0">
+                  <PlayerSeat
+                    player={westPlayer}
+                    isCurrentTurn={westPlayer && westPlayer.seatIndex === currentTurn}
+                    position="west"
+                    turnDeadline={gameState.turnDeadline}
+                    turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
+                    activeEmote={westPlayer ? activeEmotes[westPlayer.seatIndex] : null}
+                  />
+                </div>
+
+                {/* Center Trick Arena */}
+                <div className="flex-1 flex justify-center">
+                  <TrickCenter
+                    currentTrick={currentTrick}
+                    lastTrick={lastTrick}
+                    seats={seats}
+                    mySeatIndex={mySeatIndex}
+                  />
+                </div>
+
+                {/* East Opponent (Right) */}
+                <div className="w-13 sm:w-36 landscape:w-20 flex justify-end shrink-0">
+                  <PlayerSeat
+                    player={eastPlayer}
+                    isCurrentTurn={eastPlayer && eastPlayer.seatIndex === currentTurn}
+                    position="east"
+                    turnDeadline={gameState.turnDeadline}
+                    turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
+                    activeEmote={eastPlayer ? activeEmotes[eastPlayer.seatIndex] : null}
+                  />
+                </div>
               </div>
 
-              {/* East Opponent (Right) */}
-              <div className="w-13 landscape:w-28 sm:w-36 flex justify-end shrink-0">
+              {/* South Player Seat (Bottom of table - visible on desktop/tablet, hidden on mobile) */}
+              <div className="w-full justify-center z-10 hidden sm:flex landscape:hidden">
                 <PlayerSeat
-                  player={eastPlayer}
-                  isCurrentTurn={eastPlayer && eastPlayer.seatIndex === currentTurn}
-                  position="east"
+                  player={southPlayer}
+                  isCurrentTurn={southPlayer && southPlayer.seatIndex === currentTurn}
+                  position="south"
+                  isMe={true}
                   turnDeadline={gameState.turnDeadline}
                   turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
-                  activeEmote={eastPlayer ? activeEmotes[eastPlayer.seatIndex] : null}
+                  activeEmote={southPlayer ? activeEmotes[southPlayer.seatIndex] : null}
                 />
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* South Player Seat (Bottom of table - visible on desktop/tablet, hidden on mobile) */}
-            <div className="w-full justify-center z-10 hidden sm:flex">
-              <PlayerSeat
-                player={southPlayer}
-                isCurrentTurn={southPlayer && southPlayer.seatIndex === currentTurn}
-                position="south"
-                isMe={true}
-                turnDeadline={gameState.turnDeadline}
-                turnTimeoutSeconds={gameState.turnTimeoutSeconds || 15}
-                activeEmote={southPlayer ? activeEmotes[southPlayer.seatIndex] : null}
-              />
+        {/* PORTRAIT ONLY: Player status bar + Hand below the table */}
+        <div className="landscape:hidden flex flex-col">
+          {/* Status Bar / Bidding Slider */}
+          {isBiddingTurn ? (
+            <BiddingSlider myHand={myHand} onSubmitBid={onSubmitBid} />
+          ) : (
+            <div className="w-full max-w-4xl mx-auto px-2.5 sm:px-4 py-1 sm:py-1.5 flex items-center justify-between shrink-0 bg-slate-900/90 border border-slate-800 rounded-xl sm:rounded-2xl shadow-lg z-30 my-0.5">
+              {/* Left: Avatar & Name */}
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black font-bold flex items-center justify-center text-xs sm:text-sm shadow shrink-0">
+                  👤
+                  {southPlayer?.isDealer && (
+                    <span className="absolute -top-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-amber-400 text-black font-black text-[8px] sm:text-[9px] flex items-center justify-center border border-slate-900 shadow" title="Dealer">D</span>
+                  )}
+                </div>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <span className="text-[11px] sm:text-xs font-black text-slate-100">{southPlayer?.name || 'You'}</span>
+                    <span className="text-[8px] sm:text-[9px] bg-amber-400 text-black font-extrabold px-1 rounded uppercase tracking-wider">YOU</span>
+                  </div>
+                  <span className="text-[9px] sm:text-[10px] text-slate-400 font-mono leading-none block">
+                    Score: <strong className="text-amber-400">{southPlayer?.matchScore ?? 0} pts</strong>
+                  </span>
+                </div>
+              </div>
+
+              {/* Center: Bid & Won */}
+              <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs">
+                <div className="bg-slate-950 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-slate-800 flex items-center gap-1 sm:gap-1.5 shadow-inner">
+                  <span className="text-slate-400 font-medium">Call:</span>
+                  <span className="font-mono font-black text-amber-400 text-xs sm:text-sm">
+                    {southPlayer?.bid !== null && southPlayer?.bid !== undefined ? southPlayer.bid : (phase === GAME_PHASES.BIDDING ? '...' : '-')}
+                  </span>
+                </div>
+                <div className="bg-slate-950 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-slate-800 flex items-center gap-1 sm:gap-1.5 shadow-inner">
+                  <span className="text-slate-400 font-medium">Won:</span>
+                  <span className="font-mono font-black text-emerald-400 text-xs sm:text-sm">{southPlayer?.tricksWon ?? 0}</span>
+                </div>
+              </div>
+
+              {/* Right: Turn indicator + Emote */}
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <button type="button" onClick={() => setEmotePickerOpen(true)}
+                  className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl bg-slate-800/90 hover:bg-slate-700 text-amber-300 border border-slate-700 text-xs flex items-center gap-1 transition-all active:scale-90 shadow-sm shrink-0"
+                  title="Send Table Reaction">
+                  <span className="text-sm leading-none">😊</span>
+                  <span className="hidden sm:inline text-[10px] font-bold">React</span>
+                </button>
+                {isMyTurn ? (
+                  <span className="bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider shadow-md animate-pulse">Your Turn</span>
+                ) : (
+                  <span className="text-[10px] sm:text-xs text-slate-400 font-medium bg-slate-950/80 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-slate-800 truncate max-w-[100px] sm:max-w-none block text-center">
+                    {phase === GAME_PHASES.BIDDING ? `${seats[currentTurn]?.name || 'Player'} calling...` : `${seats[currentTurn]?.name || 'Player'}'s turn`}
+                  </span>
+                )}
+              </div>
             </div>
+          )}
+
+          {/* Hand Fan */}
+          <div className="w-full max-w-5xl mx-auto shrink-0 relative z-50 pointer-events-auto">
+            <HandFan
+              cards={myHand}
+              legalMoves={myLegalMoves}
+              isMyTurn={isMyTurn}
+              phase={phase}
+              onPlayCard={handlePlayCard}
+            />
           </div>
         </div>
       </div>
 
-      {/* Prominent User Details & Turn Status Bar / Bidding Slider */}
-      {isBiddingTurn ? (
-        <BiddingSlider
-          myHand={myHand}
-          onSubmitBid={onSubmitBid}
-        />
-      ) : (
-        <div className="w-full max-w-4xl mx-auto px-2.5 sm:px-4 py-1 sm:py-1.5 flex items-center justify-between shrink-0 bg-slate-900/90 border border-slate-800 rounded-xl sm:rounded-2xl shadow-lg z-30 my-0.5">
-          {/* Left: Avatar & Name */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <div className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black font-bold flex items-center justify-center text-xs sm:text-sm shadow shrink-0">
+      {/* ── LANDSCAPE RIGHT COLUMN: player info + hand fan ── */}
+      <div className="hidden landscape:flex landscape:flex-col landscape:w-[52%] landscape:max-w-[420px] landscape:justify-between landscape:py-1 landscape:px-1 landscape:gap-1">
+        {/* Mini player badge (name, bid, won, turn) */}
+        <div className="flex items-center justify-between px-2 py-1 bg-slate-900/90 border border-slate-800 rounded-xl shrink-0">
+          <div className="flex items-center gap-1.5">
+            <div className="relative w-6 h-6 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black font-bold flex items-center justify-center text-xs shadow shrink-0">
               👤
               {southPlayer?.isDealer && (
-                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-amber-400 text-black font-black text-[8px] sm:text-[9px] flex items-center justify-center border border-slate-900 shadow" title="Dealer">
-                  D
-                </span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-amber-400 text-black font-black text-[7px] flex items-center justify-center border border-slate-900">D</span>
               )}
             </div>
             <div>
               <div className="flex items-center gap-1">
-                <span className="text-[11px] sm:text-xs font-black text-slate-100">{southPlayer?.name || 'You'}</span>
-                <span className="text-[8px] sm:text-[9px] bg-amber-400 text-black font-extrabold px-1 rounded uppercase tracking-wider">
-                  YOU
-                </span>
+                <span className="text-[11px] font-black text-slate-100 leading-none">{southPlayer?.name || 'You'}</span>
+                <span className="text-[7px] bg-amber-400 text-black font-extrabold px-1 rounded uppercase">YOU</span>
               </div>
-              <span className="text-[9px] sm:text-[10px] text-slate-400 font-mono leading-none block">
-                Score: <strong className="text-amber-400">{southPlayer?.matchScore ?? 0} pts</strong>
-              </span>
+              <span className="text-[8px] text-slate-400 font-mono leading-none">{southPlayer?.matchScore ?? 0} pts</span>
             </div>
           </div>
 
-          {/* Center: Bid & Won stats */}
-          <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs">
-            <div className="bg-slate-950 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-slate-800 flex items-center gap-1 sm:gap-1.5 shadow-inner">
-              <span className="text-slate-400 font-medium">Call:</span>
-              <span className="font-mono font-black text-amber-400 text-xs sm:text-sm">
+          <div className="flex items-center gap-1 text-[10px]">
+            <div className="bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800 flex items-center gap-1">
+              <span className="text-slate-400">Call:</span>
+              <span className="font-mono font-black text-amber-400">
                 {southPlayer?.bid !== null && southPlayer?.bid !== undefined ? southPlayer.bid : (phase === GAME_PHASES.BIDDING ? '...' : '-')}
               </span>
             </div>
-            <div className="bg-slate-950 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl border border-slate-800 flex items-center gap-1 sm:gap-1.5 shadow-inner">
-              <span className="text-slate-400 font-medium">Won:</span>
-              <span className="font-mono font-black text-emerald-400 text-xs sm:text-sm">
-                {southPlayer?.tricksWon ?? 0}
-              </span>
+            <div className="bg-slate-950 px-1.5 py-0.5 rounded border border-slate-800 flex items-center gap-1">
+              <span className="text-slate-400">Won:</span>
+              <span className="font-mono font-black text-emerald-400">{southPlayer?.tricksWon ?? 0}</span>
             </div>
           </div>
 
-          {/* Right: Turn status indicator & Quick Emote button */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <button
-              type="button"
-              onClick={() => setEmotePickerOpen(true)}
-              className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg sm:rounded-xl bg-slate-800/90 hover:bg-slate-700 text-amber-300 border border-slate-700 text-xs flex items-center gap-1 transition-all active:scale-90 shadow-sm shrink-0"
-              title="Send Table Reaction"
-            >
+          <div className="flex items-center gap-1">
+            <button type="button" onClick={() => setEmotePickerOpen(true)}
+              className="px-1.5 py-0.5 rounded bg-slate-800/90 hover:bg-slate-700 text-amber-300 border border-slate-700 text-xs active:scale-90">
               <span className="text-sm leading-none">😊</span>
-              <span className="hidden sm:inline text-[10px] font-bold">React</span>
             </button>
-
             {isMyTurn ? (
-              <span className="bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider shadow-md animate-pulse">
-                Your Turn
-              </span>
+              <span className="bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-2 py-0.5 rounded-full text-[9px] font-black uppercase animate-pulse">Your Turn</span>
             ) : (
-              <span className="text-[10px] sm:text-xs text-slate-400 font-medium bg-slate-950/80 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-slate-800 truncate max-w-[100px] sm:max-w-none block text-center">
-                {phase === GAME_PHASES.BIDDING
-                  ? `${seats[currentTurn]?.name || 'Player'} calling...`
-                  : `${seats[currentTurn]?.name || 'Player'}'s turn`}
+              <span className="text-[9px] text-slate-400 bg-slate-950/80 px-1.5 py-0.5 rounded border border-slate-800 truncate max-w-[90px]">
+                {phase === GAME_PHASES.BIDDING ? 'Calling...' : `${seats[currentTurn]?.name || ''}'s turn`}
               </span>
             )}
           </div>
         </div>
-      )}
 
-      {/* Bottom Area: Human Player's Hand (Fully Visible & Accessible) */}
-      <div className="w-full max-w-5xl mx-auto shrink-0 relative z-50 pointer-events-auto">
-        <HandFan
-          cards={myHand}
-          legalMoves={myLegalMoves}
-          isMyTurn={isMyTurn}
-          phase={phase}
-          onPlayCard={handlePlayCard}
-        />
+        {/* Bidding slider (landscape) or spacer */}
+        {isBiddingTurn && (
+          <BiddingSlider myHand={myHand} onSubmitBid={onSubmitBid} />
+        )}
+
+        {/* Hand fan — takes remaining space */}
+        <div className="flex-1 min-h-0 w-full relative z-50 pointer-events-auto flex items-end">
+          <div className="w-full">
+            <HandFan
+              cards={myHand}
+              legalMoves={myLegalMoves}
+              isMyTurn={isMyTurn}
+              phase={phase}
+              onPlayCard={handlePlayCard}
+            />
+          </div>
+        </div>
       </div>
 
+      {/* Modals & Overlays */}
       <RoundResultModal
         isOpen={Boolean(roundResult) || phase === GAME_PHASES.ROUND_END}
         roundNumber={round}
@@ -306,14 +369,13 @@ export function GamePage({
         onLeave={onLeave}
       />
 
-      {/* Emote Reaction Picker */}
       <EmotePicker
         isOpen={emotePickerOpen}
         onClose={() => setEmotePickerOpen(false)}
         onSelectEmote={onSendEmote}
       />
 
-      {/* Slide-out Scoreboard Modal */}
+      {/* Slide-out Scoreboard */}
       {showScoreboard && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm select-none">
           <div className="w-full max-w-sm rounded-2xl bg-slate-900 border border-slate-700 p-5 shadow-2xl">
@@ -322,15 +384,11 @@ export function GamePage({
                 <Award size={18} className="text-amber-400" />
                 <span>Match Scoreboard</span>
               </div>
-              <button
-                type="button"
-                onClick={() => setShowScoreboard(false)}
-                className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 rounded bg-slate-800"
-              >
+              <button type="button" onClick={() => setShowScoreboard(false)}
+                className="text-xs text-slate-400 hover:text-slate-200 px-2 py-1 rounded bg-slate-800">
                 Close
               </button>
             </div>
-
             <div className="space-y-2 font-mono">
               {seats.map((p) => (
                 <div key={p.id} className="flex items-center justify-between p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-xs">
@@ -351,3 +409,5 @@ export function GamePage({
     </div>
   );
 }
+
+
