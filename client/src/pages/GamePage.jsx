@@ -94,11 +94,9 @@ export function GamePage({
     <div className="relative w-full h-[calc(100dvh-48px)] sm:h-[calc(100vh-56px)] landscape:h-[calc(100dvh-36px)] max-h-[calc(100dvh-48px)] sm:max-h-[calc(100vh-56px)] landscape:max-h-[calc(100dvh-36px)] select-none overflow-hidden
       flex flex-col landscape:flex-row landscape:items-stretch">
 
-      {/* ── PORTRAIT top info bar / LANDSCAPE left column ── */}
-      {/* In portrait: slim bar at top. In landscape: left column = full table */}
-      <div className="
-        landscape:flex-1 landscape:min-w-0 landscape:flex landscape:flex-col landscape:justify-between landscape:py-1 landscape:px-1
-        flex flex-col
+      {/* ── PORTRAIT top info bar + table + hand  /  LANDSCAPE left column ── */}
+      <div className="flex-1 min-h-0 flex flex-col
+        landscape:flex-none landscape:w-[48%] landscape:flex landscape:flex-col landscape:py-1 landscape:px-1
       ">
         {/* Game Table Info Bar */}
         <div className="w-full max-w-5xl mx-auto px-2 sm:px-4 py-0.5 sm:py-1 landscape:py-0.5 flex items-center justify-between text-xs sm:text-sm font-semibold shrink-0">
@@ -142,7 +140,7 @@ export function GamePage({
 
         {/* Main Oval Table Felt Surface */}
         <div className="relative flex-1 min-h-0 w-full max-w-5xl mx-auto px-1 sm:px-6 landscape:px-1 flex items-center justify-center my-0.5 landscape:my-0">
-          <div className="relative w-full h-full max-h-[290px] landscape:max-h-none sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 landscape:p-1.5 shadow-table flex flex-col justify-between items-center">
+          <div className="relative w-full h-full max-h-[300px] landscape:max-h-full sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 landscape:p-1.5 shadow-table flex flex-col justify-between items-center">
             {/* Felt Inner Surface */}
             <div className="relative w-full h-full rounded-[26px] sm:rounded-[34px] felt-surface p-1 sm:p-2 landscape:p-1 flex flex-col justify-between items-center border border-felt-border">
 
@@ -211,8 +209,8 @@ export function GamePage({
           </div>
         </div>
 
-        {/* PORTRAIT ONLY: Player status bar + Hand below the table */}
-        <div className="landscape:hidden flex flex-col">
+        {/* PORTRAIT ONLY: Player status bar + Hand — pushed to bottom */}
+        <div className="landscape:hidden flex flex-col shrink-0">
           {/* Status Bar / Bidding Slider */}
           {isBiddingTurn ? (
             <BiddingSlider myHand={myHand} onSubmitBid={onSubmitBid} />
@@ -284,7 +282,7 @@ export function GamePage({
       </div>
 
       {/* ── LANDSCAPE RIGHT COLUMN: player info + hand fan ── */}
-      <div className="hidden landscape:flex landscape:flex-col landscape:w-[52%] landscape:max-w-[420px] landscape:justify-between landscape:py-1 landscape:px-1 landscape:gap-1">
+      <div className="hidden landscape:flex landscape:flex-col landscape:flex-1 landscape:min-w-0 landscape:justify-between landscape:py-1 landscape:px-1 landscape:gap-1">
         {/* Mini player badge (name, bid, won, turn) */}
         <div className="flex items-center justify-between px-2 py-1 bg-slate-900/90 border border-slate-800 rounded-xl shrink-0">
           <div className="flex items-center gap-1.5">
