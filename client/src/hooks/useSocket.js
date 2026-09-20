@@ -183,11 +183,18 @@ export function useSocket() {
   }, []);
 
   const claimBonus = useCallback(() => {
-    soundEngine.playTrickWin();
     const user = getStoredUser();
     socketRef.current?.emit('user:claimBonus', { userId: user.userId }, (res) => {
       if (res?.success) {
-        setUserProfile(prev => ({ ...prev, coins: res.balance }));
+        soundEngine.playTrickWin();
+        setUserProfile(prev => ({
+          ...prev,
+          coins: res.balance,
+          lastBonusClaim: res.lastBonusClaim
+        }));
+      } else if (res?.error) {
+        soundEngine.playClick();
+        setErrorNotification(res.error);
       }
     });
   }, []);

@@ -148,13 +148,29 @@ export class VirtualCoinService {
     return { success: true, balance: user.coins, txId: tx.id };
   }
 
-  /**
-   * Refills coins if user runs out or claims daily bonus
-   */
   claimBonus(userId) {
     const user = this.getUser(userId);
-    const bonusAmount = ECONOMY.DAILY_BONUS_AMOUNT;
+    const cooldownMs = ECONOMY.DAILY_BONUS_COOLDOWN_MS || (24 * 60 * 60 * 1000);
 
+    // Enforce 24-hour daily bonus cooldown
+    if (user.lastBonusClaim) {
+      const lastClaimTime = new Date(user.lastBonusClaim).getTime();
+      const elapsed = Date.now() - lastClaimTime;
+      if (elapsed < cooldownMs) {
+        const remainingMs = cooldownMs - elapsed;
+        const remainingHours = Math.floor(remainingMs / (1000 * 60 * 60));
+        const remainingMins = Math.ceil((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
+        return {
+          success: false,
+          error: `Daily bonus already claimed! Next bonus available in ${remainingHours}h ${remainingMins}m.`,
+          remainingMs,
+          balance: user.coins,
+          lastBonusClaim: user.lastBonusClaim
+        };
+      }
+    }
+
+    const bonusAmount = ECONOMY.DAILY_BONUS_AMOUNT;
     user.coins += bonusAmount;
     user.lastBonusClaim = new Date().toISOString();
 
@@ -163,14 +179,19 @@ export class VirtualCoinService {
       type: 'DAILY_BONUS',
       amount: bonusAmount,
       balanceAfter: user.coins,
-      timestamp: new Date().toISOString(),
+      timestamp: user.lastBonusClaim,
       description: 'Daily virtual coin reload bonus'
     };
     user.transactions.unshift(tx);
     if (user.transactions.length > 50) user.transactions.pop();
 
     this.saveStorage();
-    return { success: true, balance: user.coins, amount: bonusAmount };
+    return {
+      success: true,
+      balance: user.coins,
+      amount: bonusAmount,
+      lastBonusClaim: user.lastBonusClaim
+    };
   }
 }
 

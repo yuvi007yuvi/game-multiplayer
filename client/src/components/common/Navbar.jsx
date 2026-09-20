@@ -12,6 +12,8 @@ export function Navbar({
   connected
 }) {
   const coins = userProfile?.coins ?? 1000;
+  const lastClaim = userProfile?.lastBonusClaim ? new Date(userProfile.lastBonusClaim).getTime() : 0;
+  const isBonusAvailable = !lastClaim || (Date.now() - lastClaim >= 24 * 60 * 60 * 1000);
 
   return (
     <header className="w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-3 sm:px-4 py-1.5 sm:py-2.5 flex items-center justify-between sticky top-0 z-40 select-none">
@@ -38,7 +40,7 @@ export function Navbar({
           <span className="text-xs sm:text-sm font-extrabold text-amber-300 font-mono">
             {coins.toLocaleString()}
           </span>
-          {coins < 500 && (
+          {coins < 500 && isBonusAvailable && (
             <button
               type="button"
               onClick={onClaimBonus}

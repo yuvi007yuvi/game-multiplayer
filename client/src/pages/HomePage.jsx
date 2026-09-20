@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Play, PlusCircle, LogIn, Trophy, Sparkles, Coins, Users, ShieldCheck } from 'lucide-react';
+import { Play, PlusCircle, LogIn, Trophy, Sparkles, Coins, Users, ShieldCheck, Clock } from 'lucide-react';
 import { soundEngine } from '../services/soundEngine.js';
 
 export function HomePage({
@@ -13,6 +13,20 @@ export function HomePage({
   const [createStake, setCreateStake] = useState(100);
   const [createRounds, setCreateRounds] = useState(5);
   const [showCreateModal, setShowCreateModal] = useState(false);
+
+  // Daily bonus 24-hour cooldown calculation
+  const lastClaim = userProfile?.lastBonusClaim ? new Date(userProfile.lastBonusClaim).getTime() : 0;
+  const cooldownMs = 24 * 60 * 60 * 1000;
+  const timeSinceClaim = Date.now() - lastClaim;
+  const isBonusAvailable = !lastClaim || timeSinceClaim >= cooldownMs;
+
+  const getRemainingTimeStr = () => {
+    if (isBonusAvailable) return null;
+    const remaining = cooldownMs - timeSinceClaim;
+    const h = Math.floor(remaining / (1000 * 60 * 60));
+    const m = Math.ceil((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    return `${h}h ${m}m`;
+  };
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
@@ -134,16 +148,25 @@ export function HomePage({
               <Coins size={18} className="text-amber-400 shrink-0" />
               <div>
                 <span className="text-xs font-bold text-amber-300 block">Daily Free Coins</span>
-                <span className="text-[11px] text-slate-400">Claim 500 virtual coins</span>
+                <span className="text-[11px] text-slate-400">
+                  {isBonusAvailable ? 'Claim +500 free virtual coins' : `Claimed • Next bonus in ${getRemainingTimeStr()}`}
+                </span>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={onClaimBonus}
-              className="px-3 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs font-black uppercase transition-colors"
-            >
-              Claim
-            </button>
+            {isBonusAvailable ? (
+              <button
+                type="button"
+                onClick={onClaimBonus}
+                className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md active:scale-95 transition-all animate-pulse"
+              >
+                Claim
+              </button>
+            ) : (
+              <span className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-800/80 text-slate-400 text-xs font-semibold border border-slate-700">
+                <Clock size={12} className="text-amber-400/80" />
+                <span>{getRemainingTimeStr()}</span>
+              </span>
+            )}
           </div>
         </div>
 
