@@ -1,0 +1,2405 @@
+{
+  "users": {
+    "u1": {
+      "id": "u1",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:16:40.145Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_f11f0a5e-383d-428a-a8b1-ef1e4a9e162e",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:16:40.278Z",
+          "description": "Table entry fee for IXM04K"
+        },
+        {
+          "id": "tx_6d9e88fe-0f5d-471a-b510-5cff6e640e60",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:16:40.146Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2": {
+      "id": "u2",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:16:40.279Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_103b98b8-0587-4e4f-bc09-38e324bda9f1",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:16:40.280Z",
+          "description": "Table entry fee for IXM04K"
+        },
+        {
+          "id": "tx_6589b81c-e6ea-4ffb-8f24-74a013a5d59f",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:16:40.279Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789921039532": {
+      "id": "u1_1789921039532",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:17:19.569Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_a5311795-2ffe-4b87-bdfd-4a186c30765b",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:17:19.702Z",
+          "description": "Table entry fee for IBHMTU"
+        },
+        {
+          "id": "tx_8d4da9d6-11df-4629-876f-33dcb4db049b",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:17:19.570Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789921039532": {
+      "id": "u2_1789921039532",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:17:19.703Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_070aedc9-e868-4691-9e8d-d16c87177974",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:17:19.703Z",
+          "description": "Table entry fee for IBHMTU"
+        },
+        {
+          "id": "tx_5ca935e8-42ba-4291-840c-f95624639dcd",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:17:19.703Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789921384254": {
+      "id": "u1_1789921384254",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:23:04.302Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_ce9b40ed-93f2-4be6-9e16-2700c4d59b59",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:23:04.415Z",
+          "description": "Table entry fee for 7PFJLD"
+        },
+        {
+          "id": "tx_b8aea281-eea7-4884-861e-7bb4c26237c9",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:23:04.302Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789921384254": {
+      "id": "u2_1789921384254",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T16:23:04.416Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_51bbc15e-cd53-4736-ad9a-b94b196d40f3",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:23:04.416Z",
+          "description": "Table entry fee for 7PFJLD"
+        },
+        {
+          "id": "tx_acc69e1b-1fc7-4de1-86c0-95846b8c915d",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:23:04.416Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "user_7youh2dd": {
+      "id": "user_7youh2dd",
+      "name": "Player 323",
+      "coins": 12360,
+      "createdAt": "2026-09-20T16:24:30.595Z",
+      "lastBonusClaim": "2026-09-20T17:08:43.819Z",
+      "stats": {
+        "gamesPlayed": 5,
+        "gamesWon": 2,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_bf941a50-1cd7-4754-9e5a-efb4cda1b08d",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12360,
+          "timestamp": "2026-09-20T18:39:13.320Z",
+          "description": "Table entry fee for ZJ2GC2"
+        },
+        {
+          "id": "tx_f9c81f2e-43ca-4566-bd5e-83e9dfe27031",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 12460,
+          "timestamp": "2026-09-20T17:41:00.582Z",
+          "description": "Rank #2 prize for match WJFOOA"
+        },
+        {
+          "id": "tx_3661ec79-21ec-445e-ae82-f3ecdad020f2",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12300,
+          "timestamp": "2026-09-20T17:40:37.428Z",
+          "description": "Table entry fee for KAOBXT"
+        },
+        {
+          "id": "tx_e355e8f0-e60a-44e2-b9cd-9ce9646a5e47",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12400,
+          "timestamp": "2026-09-20T17:36:40.663Z",
+          "description": "Table entry fee for WJFOOA"
+        },
+        {
+          "id": "tx_202c5899-07bb-4e97-bee1-9b681ae7d01a",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12500,
+          "timestamp": "2026-09-20T17:32:27.689Z",
+          "description": "Table entry fee for 0KXGVV"
+        },
+        {
+          "id": "tx_3c1d0368-134a-418c-bff7-38cf4fb1a2a9",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 12600,
+          "timestamp": "2026-09-20T17:31:02.005Z",
+          "description": "Rank #2 prize for match 5M0XNK"
+        },
+        {
+          "id": "tx_46cc0302-1daa-4a14-8e1f-ddc4c63b0321",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 12440,
+          "timestamp": "2026-09-20T17:19:15.695Z",
+          "description": "Rank #1 prize for match C5J7JJ"
+        },
+        {
+          "id": "tx_131e5ba1-9a5c-42b1-a311-891eaa3c3555",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12200,
+          "timestamp": "2026-09-20T17:18:40.692Z",
+          "description": "Table entry fee for 5M0XNK"
+        },
+        {
+          "id": "tx_281ec472-198e-4dea-b282-7c1863c4fffb",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 12300,
+          "timestamp": "2026-09-20T17:15:14.866Z",
+          "description": "Table entry fee for C5J7JJ"
+        },
+        {
+          "id": "tx_ae6d4290-8d3f-4107-b175-be651a0d43b8",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 12400,
+          "timestamp": "2026-09-20T17:08:43.819Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_2e9a055b-f795-4f11-9a39-b1efc2cbf8b5",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 11900,
+          "timestamp": "2026-09-20T17:08:43.634Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_d19d1f65-e301-4c4a-99d7-b268ebcc5f7b",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 11400,
+          "timestamp": "2026-09-20T17:08:43.501Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_ec9682dc-9398-41ef-b9fd-15fd4f1a597f",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 10900,
+          "timestamp": "2026-09-20T17:08:43.379Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_ba51a38a-0c7b-4f8b-92ff-9e3969fa383c",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 10400,
+          "timestamp": "2026-09-20T17:08:43.145Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_84a6db8c-c25a-4698-bd52-5c93bede730a",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 9900,
+          "timestamp": "2026-09-20T17:08:43.017Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_a8b722a0-f873-4571-848a-e5b86f80ae25",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 9400,
+          "timestamp": "2026-09-20T17:08:42.881Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_5265d9a8-63d5-4278-89e2-4c5e5c3d09e0",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 8900,
+          "timestamp": "2026-09-20T17:08:42.752Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_fa539cf3-814f-4219-acc6-9da13c1f94b9",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 8400,
+          "timestamp": "2026-09-20T17:08:42.616Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_09f706b5-6c0c-4090-9aed-74538a8e6d42",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 7900,
+          "timestamp": "2026-09-20T17:08:42.467Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_0bb22995-6300-4dca-9646-06abba198cc4",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 7400,
+          "timestamp": "2026-09-20T17:08:42.319Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_27fe4fc2-f0fe-443d-a54b-10d8b1740c7f",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 6900,
+          "timestamp": "2026-09-20T17:08:42.158Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_8027eb99-5e36-4816-8995-f72d7b2a5cd3",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 6400,
+          "timestamp": "2026-09-20T17:08:42.015Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_124d3419-9521-42d8-8a19-c62e06463437",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 5900,
+          "timestamp": "2026-09-20T17:03:51.763Z",
+          "description": "Table entry fee for SW2XQN"
+        },
+        {
+          "id": "tx_4af134b3-a93f-459a-af74-b035ca965213",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 6000,
+          "timestamp": "2026-09-20T17:01:26.862Z",
+          "description": "Rank #2 prize for match N4DC7L"
+        },
+        {
+          "id": "tx_b35900ae-a9e7-4db9-b2f1-5410cb316d74",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 5840,
+          "timestamp": "2026-09-20T17:00:54.219Z",
+          "description": "Table entry fee for GFDGQS"
+        },
+        {
+          "id": "tx_2c4dbc89-0b5d-42c2-afb8-fdf39559f06a",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 5940,
+          "timestamp": "2026-09-20T16:59:23.314Z",
+          "description": "Table entry fee for N4DC7L"
+        },
+        {
+          "id": "tx_2f55695e-af95-4659-894f-0d0142977d86",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 6040,
+          "timestamp": "2026-09-20T16:57:26.779Z",
+          "description": "Table entry fee for 9KS8CJ"
+        },
+        {
+          "id": "tx_dab197d7-4aa9-40fb-9253-48e6025dcc02",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 6140,
+          "timestamp": "2026-09-20T16:57:12.642Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_e2f773d7-b916-4bba-9e06-0d4264a478b2",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 5640,
+          "timestamp": "2026-09-20T16:57:11.661Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_26ac84dc-1b2b-46eb-b07b-40ed01f984db",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 5140,
+          "timestamp": "2026-09-20T16:57:10.504Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_6ee7f216-47a2-4e20-a00e-5d2af2014ac3",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 4640,
+          "timestamp": "2026-09-20T16:56:12.126Z",
+          "description": "Rank #1 prize for match E1YM4Y"
+        },
+        {
+          "id": "tx_38dd1166-6868-4cf3-ae8f-5c74eee60a58",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 4400,
+          "timestamp": "2026-09-20T16:54:28.334Z",
+          "description": "Table entry fee for E1YM4Y"
+        },
+        {
+          "id": "tx_21dd33cc-196c-4068-bdb5-bf479e774089",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 4500,
+          "timestamp": "2026-09-20T16:51:18.953Z",
+          "description": "Table entry fee for JRMJN3"
+        },
+        {
+          "id": "tx_1da5eba5-bdea-4303-9a19-9f23f2e49461",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 4600,
+          "timestamp": "2026-09-20T16:50:00.367Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_692c41ff-eab0-4bb3-8596-b52b2daf2930",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 4100,
+          "timestamp": "2026-09-20T16:50:00.150Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_5204d3ef-c183-425a-81da-2efa1eb4b024",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 3600,
+          "timestamp": "2026-09-20T16:49:59.964Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_50e77ba3-860c-4c21-b47b-2b36c12a4427",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 3100,
+          "timestamp": "2026-09-20T16:49:59.807Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_58024672-a4a2-4d34-9dd8-72d49e1bbf2f",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 2600,
+          "timestamp": "2026-09-20T16:49:59.610Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_f8750954-a45a-4611-9fa2-d8f7c8211b1f",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 2100,
+          "timestamp": "2026-09-20T16:49:59.425Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_b93aa7f5-b2fc-474b-9c05-ea29123e6878",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 1600,
+          "timestamp": "2026-09-20T16:49:58.767Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_b64d7b49-3d63-48d1-9aab-0f76c12c0852",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 1100,
+          "timestamp": "2026-09-20T16:49:54.959Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_ba8a0a80-5207-40d8-b895-75b82966df89",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 600,
+          "timestamp": "2026-09-20T16:44:04.867Z",
+          "description": "Table entry fee for 565GRK"
+        },
+        {
+          "id": "tx_76c17ed4-7425-42d6-8b5d-623d7c700a73",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 700,
+          "timestamp": "2026-09-20T16:42:58.570Z",
+          "description": "Table entry fee for LF8ZER"
+        },
+        {
+          "id": "tx_52927aa8-cb63-409e-838e-2668fd7ef8b3",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 800,
+          "timestamp": "2026-09-20T16:39:44.426Z",
+          "description": "Table entry fee for Y705AQ"
+        },
+        {
+          "id": "tx_a39e42fd-1e6a-4094-a239-ee4ef0ce5859",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T16:26:03.814Z",
+          "description": "Table entry fee for 5NF8TT"
+        },
+        {
+          "id": "tx_be175467-9efb-4540-94a1-3e29fda23757",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:24:30.595Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_08741cd3": {
+      "id": "bot_08741cd3",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:40:29.896Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_17ae16fe-4f06-4f74-9031-f7de14e688cd",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:40:29.899Z",
+          "description": "Rank #1 prize for match 5NF8TT"
+        },
+        {
+          "id": "tx_92600095-5a1c-48c6-aa53-08a7b1721807",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:40:29.897Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_585bdc7b": {
+      "id": "bot_585bdc7b",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:40:29.902Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_86f0e2de-3975-4f6f-93e9-b8d9c3f48531",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:40:29.902Z",
+          "description": "Rank #2 prize for match 5NF8TT"
+        },
+        {
+          "id": "tx_3d5427e2-3d5b-445c-82b3-6d34ab1e1c5c",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:40:29.902Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_ae3a584b": {
+      "id": "bot_ae3a584b",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:41:23.623Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_34144f60-d672-4b61-a661-533a71a73c08",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:41:23.624Z",
+          "description": "Rank #1 prize for match Y705AQ"
+        },
+        {
+          "id": "tx_619dde35-ead3-49ef-b2f0-d60e473cbac3",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:41:23.623Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_88964388": {
+      "id": "bot_88964388",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:41:23.624Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_876be641-94c4-4fb8-9854-d2356f3255ba",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:41:23.625Z",
+          "description": "Rank #2 prize for match Y705AQ"
+        },
+        {
+          "id": "tx_ddfdc6fd-81c7-4a3d-b65f-e285b3447786",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:41:23.624Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_3ce51470": {
+      "id": "bot_3ce51470",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:44:50.889Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_5ea42c8d-9db8-4e18-92ef-14ecd4fa0f80",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:44:50.890Z",
+          "description": "Rank #1 prize for match LF8ZER"
+        },
+        {
+          "id": "tx_c50c1dbf-6ce7-4890-b45d-5375351c2253",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:44:50.889Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_b360d6f2": {
+      "id": "bot_b360d6f2",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:44:50.891Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_3e8c5de5-abf4-42c6-9b08-115f83132250",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:44:50.894Z",
+          "description": "Rank #2 prize for match LF8ZER"
+        },
+        {
+          "id": "tx_eea9ca8e-b48e-4bcd-ab5c-2c62d4a34547",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:44:50.891Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_c842354a": {
+      "id": "bot_c842354a",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:49:11.358Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_5a52e650-2fb6-4e53-b106-7e3aa85d50da",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:49:11.362Z",
+          "description": "Rank #1 prize for match 565GRK"
+        },
+        {
+          "id": "tx_ee1043e8-c8c1-4dd6-b10c-140bc19d6753",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:49:11.358Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_3b2924ba": {
+      "id": "bot_3b2924ba",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:49:11.365Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_3f63c150-0ce7-4dab-a351-65e95504438b",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:49:11.368Z",
+          "description": "Rank #2 prize for match 565GRK"
+        },
+        {
+          "id": "tx_7922dfe1-26c0-4984-bb03-41802b62ae1a",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:49:11.365Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_d435dfda": {
+      "id": "bot_d435dfda",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:53:50.354Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_5a42056c-628d-464f-96f8-4fcac54d2dd8",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:53:50.356Z",
+          "description": "Rank #1 prize for match JRMJN3"
+        },
+        {
+          "id": "tx_d2095783-763c-4331-a26a-facd6496a5d9",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:53:50.354Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_cd5e34ba": {
+      "id": "bot_cd5e34ba",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:53:50.358Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_96bb6e00-4da7-44a5-9f10-e76a70db82fe",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:53:50.392Z",
+          "description": "Rank #2 prize for match JRMJN3"
+        },
+        {
+          "id": "tx_c7cf52aa-d282-496f-9fc7-bba2848623bf",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:53:50.358Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_0aba5d42": {
+      "id": "bot_0aba5d42",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:56:12.128Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_e7d65bbe-f555-424c-9c3e-916045b2fed5",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:56:12.131Z",
+          "description": "Rank #2 prize for match E1YM4Y"
+        },
+        {
+          "id": "tx_b23ca464-b734-4704-bf45-a855eb2d26ee",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:56:12.128Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_4d37779b": {
+      "id": "bot_4d37779b",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T16:59:48.400Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_f3a94c11-f70a-4580-a0fc-ecc70713362c",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T16:59:48.404Z",
+          "description": "Rank #1 prize for match 9KS8CJ"
+        },
+        {
+          "id": "tx_928b4aa4-fc6d-4345-b1d7-1c75b85f7d2e",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:59:48.400Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_119175c2": {
+      "id": "bot_119175c2",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T16:59:48.415Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_7dce6156-1f8a-4933-ab43-e3b0b5801ac2",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T16:59:48.417Z",
+          "description": "Rank #2 prize for match 9KS8CJ"
+        },
+        {
+          "id": "tx_af6cb938-0556-473f-8639-1d4d1cf7f1bc",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T16:59:48.415Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_4ddf2c60": {
+      "id": "bot_4ddf2c60",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:01:26.855Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_b099d043-789b-497f-b54c-a4c0d7c845ce",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:01:26.858Z",
+          "description": "Rank #1 prize for match N4DC7L"
+        },
+        {
+          "id": "tx_e50f948d-2647-405f-8055-87c7d29b12cc",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:01:26.855Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_4aa1c73a": {
+      "id": "bot_4aa1c73a",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:02:48.655Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_0add2c17-f127-424e-ae70-1c0412138344",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:02:48.657Z",
+          "description": "Rank #1 prize for match GFDGQS"
+        },
+        {
+          "id": "tx_47d9f90e-eb0c-4107-b610-980553a01642",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:02:48.655Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_2dd7380a": {
+      "id": "bot_2dd7380a",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:02:48.657Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_1ec59c4a-ee69-45bb-9dd7-129ae63d498c",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:02:48.659Z",
+          "description": "Rank #2 prize for match GFDGQS"
+        },
+        {
+          "id": "tx_31e8e489-f2be-4f5f-8d3c-b74922da20c5",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:02:48.657Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_6c3d957f": {
+      "id": "bot_6c3d957f",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:08:25.084Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_05de9564-6c3a-43f2-8835-d8dd2cc39a18",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:08:25.085Z",
+          "description": "Rank #1 prize for match SW2XQN"
+        },
+        {
+          "id": "tx_92cac17c-dac9-4c61-9e14-bb7c18a9e74f",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:08:25.084Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_8185b6c3": {
+      "id": "bot_8185b6c3",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:08:25.086Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_cf6375fc-7576-49f8-990d-4908ef722deb",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:08:25.088Z",
+          "description": "Rank #2 prize for match SW2XQN"
+        },
+        {
+          "id": "tx_0f84e997-984e-4eee-99f6-a76dfc4596c2",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:08:25.086Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_f20828e8": {
+      "id": "bot_f20828e8",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:19:15.698Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_741e88b0-d484-4c35-84ca-4f7275260627",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:19:15.699Z",
+          "description": "Rank #2 prize for match C5J7JJ"
+        },
+        {
+          "id": "tx_3020d643-6db1-4014-8a34-ac4cdad89dfd",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:19:15.698Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_76e792d9": {
+      "id": "bot_76e792d9",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:31:02.003Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_65b3c075-482d-4de7-87d1-472d1848a757",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:31:02.004Z",
+          "description": "Rank #1 prize for match 5M0XNK"
+        },
+        {
+          "id": "tx_9c04bb03-0126-43ea-a66b-b909e6697dfa",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:31:02.003Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_aa054a76": {
+      "id": "bot_aa054a76",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:35:32.062Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_1eaeb351-9c78-4d8e-9492-46575ec93ff3",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:35:32.064Z",
+          "description": "Rank #1 prize for match 0KXGVV"
+        },
+        {
+          "id": "tx_e5073d81-bb13-4235-ab9e-232c3e5de3dc",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:35:32.062Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_d57fac16": {
+      "id": "bot_d57fac16",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:35:32.065Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_4484f8f1-70ff-4b20-846c-a53cc14d924e",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:35:32.066Z",
+          "description": "Rank #2 prize for match 0KXGVV"
+        },
+        {
+          "id": "tx_6f66afd4-8525-4e07-987d-e574d6455b3d",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:35:32.065Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_f6b21a7b": {
+      "id": "bot_f6b21a7b",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:41:00.580Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_437343a7-215e-40b8-9c8c-e935053ba593",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:41:00.581Z",
+          "description": "Rank #1 prize for match WJFOOA"
+        },
+        {
+          "id": "tx_0a242650-544b-422b-bea7-800dd12621ed",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:41:00.580Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "user_dqy4up29": {
+      "id": "user_dqy4up29",
+      "name": "Player 700",
+      "coins": 10320,
+      "createdAt": "2026-09-20T17:41:32.715Z",
+      "lastBonusClaim": "2026-09-20T18:47:20.856Z",
+      "stats": {
+        "gamesPlayed": 4,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_05fedfa0-097f-45b4-b08f-ff05ccf2d225",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 10320,
+          "timestamp": "2026-09-20T18:47:20.856Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_c377e4b7-b5fe-4703-abea-488caec042f1",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 9820,
+          "timestamp": "2026-09-20T18:47:20.075Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_5fe2a1c2-c171-460c-8cad-2fa630974431",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 9320,
+          "timestamp": "2026-09-20T18:47:19.653Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_d201f04d-69de-47b4-a498-cb075998a9a7",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 8820,
+          "timestamp": "2026-09-20T18:47:18.951Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_a6a84e4c-0456-4be9-9bae-c5ae3798a113",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 8320,
+          "timestamp": "2026-09-20T18:47:18.726Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_e37f58d3-67a7-41b4-baf2-c695c1c3bf4c",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 7820,
+          "timestamp": "2026-09-20T18:47:18.549Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_99683d8b-0030-4f8d-a240-1ccfd63cd371",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 7320,
+          "timestamp": "2026-09-20T18:47:18.351Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_2803b799-fa8d-4dd7-8c10-878ca7734e29",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 6820,
+          "timestamp": "2026-09-20T18:47:18.174Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_8c879025-9e62-40db-a6c0-9452a6ca1659",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 6320,
+          "timestamp": "2026-09-20T18:47:17.998Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_82ec43e4-3de8-4ad6-bd1c-27b51339aa03",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 5820,
+          "timestamp": "2026-09-20T18:47:17.813Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_1f49b669-1f85-46cf-85fa-a16111a9817a",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 5320,
+          "timestamp": "2026-09-20T18:47:17.637Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_bb40e028-8fa5-42de-80e7-da9d1db21f6c",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 4820,
+          "timestamp": "2026-09-20T18:47:17.467Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_da18a9cc-c1be-4910-a145-a1fcb54ac568",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 4320,
+          "timestamp": "2026-09-20T18:47:17.288Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_f0c57c8f-57d8-4f14-937d-f28398ad72e3",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 3820,
+          "timestamp": "2026-09-20T18:47:08.787Z",
+          "description": "Rank #2 prize for match VXFX2R"
+        },
+        {
+          "id": "tx_2d2e7179-9b13-4f90-a70b-a4ae06cca486",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 3660,
+          "timestamp": "2026-09-20T18:45:35.969Z",
+          "description": "Table entry fee for VXFX2R"
+        },
+        {
+          "id": "tx_43a56793-b743-46d6-bd77-5a790e055e6e",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 3760,
+          "timestamp": "2026-09-20T18:42:39.831Z",
+          "description": "Table entry fee for 2G3CBW"
+        },
+        {
+          "id": "tx_80a5c169-1f1d-4210-9b67-c134fff07f3a",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 3860,
+          "timestamp": "2026-09-20T18:36:56.668Z",
+          "description": "Table entry fee for TNXK9L"
+        },
+        {
+          "id": "tx_4a655d1d-ff76-4fd2-87da-55d83ae34754",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 3960,
+          "timestamp": "2026-09-20T18:35:11.743Z",
+          "description": "Rank #2 prize for match POLCIT"
+        },
+        {
+          "id": "tx_1e2c22a1-899c-457c-94a7-11d4c967b542",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 3800,
+          "timestamp": "2026-09-20T18:34:34.761Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_3778a13b-1837-49d3-9f2b-1cca3921a859",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 3300,
+          "timestamp": "2026-09-20T18:34:34.460Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_8cff1a6f-c961-448d-b277-a092bffcafc8",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 2800,
+          "timestamp": "2026-09-20T18:34:34.245Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_e749f6e1-5c63-4d27-a9fc-d8ba4e5aeda9",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 2300,
+          "timestamp": "2026-09-20T18:34:34.017Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_43d003b9-947b-43cd-9d2c-6dbd57ea755d",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 1800,
+          "timestamp": "2026-09-20T18:31:22.141Z",
+          "description": "Table entry fee for POLCIT"
+        },
+        {
+          "id": "tx_a0f8d8e3-a390-4e8e-9dd9-8014eb5d684c",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 1900,
+          "timestamp": "2026-09-20T18:29:53.149Z",
+          "description": "Table entry fee for NVOR28"
+        },
+        {
+          "id": "tx_4cdfc450-2e9a-4121-8cc3-7774000fa2aa",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 2000,
+          "timestamp": "2026-09-20T17:52:16.674Z",
+          "description": "Rank #1 prize for match CFQREC"
+        },
+        {
+          "id": "tx_491f47e8-7aea-4b22-9b60-90af96555a7f",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 1760,
+          "timestamp": "2026-09-20T17:51:56.191Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_e48417d3-fce0-4079-8ab9-04b7076a7279",
+          "type": "DAILY_BONUS",
+          "amount": 500,
+          "balanceAfter": 1260,
+          "timestamp": "2026-09-20T17:51:55.411Z",
+          "description": "Daily virtual coin reload bonus"
+        },
+        {
+          "id": "tx_b15b2309-38f1-4a57-8f49-9da267f1a3f8",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 760,
+          "timestamp": "2026-09-20T17:51:23.006Z",
+          "description": "Table entry fee for ZVIZ2Q"
+        },
+        {
+          "id": "tx_d192d549-b524-4c7f-af0a-65df32c789a1",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 860,
+          "timestamp": "2026-09-20T17:47:08.053Z",
+          "description": "Rank #2 prize for match PH84LI"
+        },
+        {
+          "id": "tx_e564aa0e-3075-4f78-bca3-5d20bd9cf422",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 700,
+          "timestamp": "2026-09-20T17:46:33.549Z",
+          "description": "Table entry fee for CFQREC"
+        },
+        {
+          "id": "tx_21160a40-c3e7-4183-b8ba-9d46874ca29a",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 800,
+          "timestamp": "2026-09-20T17:45:09.122Z",
+          "description": "Table entry fee for PH84LI"
+        },
+        {
+          "id": "tx_49cb4c59-6d4f-471d-b4dc-3fb9b2df1133",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T17:41:40.607Z",
+          "description": "Table entry fee for GH8URK"
+        },
+        {
+          "id": "tx_82f305df-8eb0-4470-b6b6-f49c44ba5bd4",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:41:32.715Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_c4b5ab8c": {
+      "id": "bot_c4b5ab8c",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:45:40.967Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_8e8d1c65-612e-415f-8978-e1f85f1aa423",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:45:40.968Z",
+          "description": "Rank #1 prize for match GH8URK"
+        },
+        {
+          "id": "tx_80daa87a-7847-4339-9b80-224e7718adbe",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:45:40.967Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_5c3f4b01": {
+      "id": "bot_5c3f4b01",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:45:40.970Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_6a73d17b-313b-4359-8637-cc9746b1af84",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:45:40.971Z",
+          "description": "Rank #2 prize for match GH8URK"
+        },
+        {
+          "id": "tx_44da8668-2687-42f6-a600-0f00f76d8fa4",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:45:40.970Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_8396621c": {
+      "id": "bot_8396621c",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:47:08.051Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_0b218afc-aff4-47aa-b282-5ccbeebf0686",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:47:08.053Z",
+          "description": "Rank #1 prize for match PH84LI"
+        },
+        {
+          "id": "tx_679b0599-c2d1-41ce-9782-62a1e9bf1524",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:47:08.052Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_d557573f": {
+      "id": "bot_d557573f",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:47:52.812Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_f6e53f26-0a6c-432b-a361-c827d0f85944",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:47:52.813Z",
+          "description": "Rank #1 prize for match KAOBXT"
+        },
+        {
+          "id": "tx_8a6c272d-4ae0-4d71-a927-575af1470a2c",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:47:52.813Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_cfcd5383": {
+      "id": "bot_cfcd5383",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:47:52.814Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_cc292db5-55fe-4165-8eb1-248eec4e8bd6",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:47:52.815Z",
+          "description": "Rank #2 prize for match KAOBXT"
+        },
+        {
+          "id": "tx_a7aa66d0-080d-4c90-92bd-78e5f59e82ac",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:47:52.814Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_1209f2c4": {
+      "id": "bot_1209f2c4",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:52:16.678Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_a90b31ff-8e23-486d-8eb7-607069d24185",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:52:16.679Z",
+          "description": "Rank #2 prize for match CFQREC"
+        },
+        {
+          "id": "tx_cc14f5e7-8b6b-451a-ab34-a05a3da0f2e0",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:52:16.678Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_6c9b059a": {
+      "id": "bot_6c9b059a",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T17:52:44.406Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_c432cdc1-b9a6-4820-9454-d4c28fa90fc2",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T17:52:44.409Z",
+          "description": "Rank #1 prize for match ZVIZ2Q"
+        },
+        {
+          "id": "tx_ab93d2ba-a8d2-4333-855c-2c38446bac34",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:52:44.406Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_da4ee672": {
+      "id": "bot_da4ee672",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T17:52:44.411Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_d35c72db-66d8-4d67-af92-9fda6f7bfba3",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T17:52:44.413Z",
+          "description": "Rank #2 prize for match ZVIZ2Q"
+        },
+        {
+          "id": "tx_f8763868-3b94-483c-a7d4-75d637d04b28",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:52:44.411Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789927061539": {
+      "id": "u1_1789927061539",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T17:57:41.611Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_1396fffc-8265-4685-9c47-798959396fb7",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T17:57:41.731Z",
+          "description": "Table entry fee for BOG50Y"
+        },
+        {
+          "id": "tx_6268ef4f-d4ab-4243-8383-095faffca9a1",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:57:41.611Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789927061539": {
+      "id": "u2_1789927061539",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T17:57:41.733Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_75c54883-1625-4c4a-aa56-2444b3ff89c6",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T17:57:41.734Z",
+          "description": "Table entry fee for BOG50Y"
+        },
+        {
+          "id": "tx_82234c34-718b-47f8-a1c6-71d55a65bf69",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T17:57:41.733Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789927303476": {
+      "id": "u1_1789927303476",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:01:43.526Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_68cd57de-7d9b-46b2-8e8b-16c877bdd4a4",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:01:43.662Z",
+          "description": "Table entry fee for 708FAJ"
+        },
+        {
+          "id": "tx_e5360c20-8994-41d7-9d3a-4860a48ae9a7",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:01:43.526Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789927303476": {
+      "id": "u2_1789927303476",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:01:43.663Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_820fe08b-bb9f-434d-af0d-14df3360fda2",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:01:43.664Z",
+          "description": "Table entry fee for 708FAJ"
+        },
+        {
+          "id": "tx_123066d7-fafa-4947-9cf2-f76fba43c6e1",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:01:43.663Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_280c8dec": {
+      "id": "bot_280c8dec",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:32:07.254Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_7ee03cc2-6533-495a-8bce-08f0912dd342",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:32:07.256Z",
+          "description": "Rank #1 prize for match NVOR28"
+        },
+        {
+          "id": "tx_76af6e18-c73a-4060-83d5-14a95fdaf387",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:32:07.254Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_dc03e72f": {
+      "id": "bot_dc03e72f",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T18:32:07.257Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_7a0513c3-6142-4a1f-af3d-f1cb62e48880",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T18:32:07.259Z",
+          "description": "Rank #2 prize for match NVOR28"
+        },
+        {
+          "id": "tx_29d86aff-3dfd-48fb-b30e-6c3942ac8b4e",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:32:07.257Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_7ba2d71e": {
+      "id": "bot_7ba2d71e",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:35:11.739Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_3d65d1ef-bc81-496d-bc7c-84a790e4240d",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:35:11.741Z",
+          "description": "Rank #1 prize for match POLCIT"
+        },
+        {
+          "id": "tx_1178eb47-ad31-4584-9e07-47e7cfdf4d2f",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:35:11.739Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789929353430": {
+      "id": "u1_1789929353430",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:35:53.471Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_255b8b78-4f78-4beb-afc1-693a0f9b3c91",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:35:53.602Z",
+          "description": "Table entry fee for SCPGD3"
+        },
+        {
+          "id": "tx_5b0a8447-925a-4568-b6ab-8366db8f0e71",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:35:53.471Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789929353430": {
+      "id": "u2_1789929353430",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:35:53.603Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_fa8df523-7c07-4d0c-b043-e8749c64dc74",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:35:53.604Z",
+          "description": "Table entry fee for SCPGD3"
+        },
+        {
+          "id": "tx_9592a45f-58f2-4024-beca-b8a1945aea1a",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:35:53.603Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u1_1789929365782": {
+      "id": "u1_1789929365782",
+      "name": "Alice",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:36:05.821Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_04dcb77c-b27f-462d-814e-a08413cd425a",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:36:05.945Z",
+          "description": "Table entry fee for TEHNAS"
+        },
+        {
+          "id": "tx_56dc8c79-c5cc-474a-825a-b99d3dd68179",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:36:05.821Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "u2_1789929365782": {
+      "id": "u2_1789929365782",
+      "name": "Guest",
+      "coins": 900,
+      "createdAt": "2026-09-20T18:36:05.947Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 0,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_0e50c5f6-6cb4-4d8e-b8e2-ddae36614fef",
+          "type": "TABLE_STAKE",
+          "amount": -100,
+          "balanceAfter": 900,
+          "timestamp": "2026-09-20T18:36:05.949Z",
+          "description": "Table entry fee for TEHNAS"
+        },
+        {
+          "id": "tx_b4453af6-e98b-4259-850e-28015ab99f12",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:36:05.947Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_4bf6e1da": {
+      "id": "bot_4bf6e1da",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:39:05.103Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_94e6d02d-4aa6-4c7b-a7b0-85fcba0f2090",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:39:05.112Z",
+          "description": "Rank #1 prize for match TNXK9L"
+        },
+        {
+          "id": "tx_d00b51cd-1ca3-458b-97c4-a7f7489cd445",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:39:05.103Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_363e8b93": {
+      "id": "bot_363e8b93",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T18:39:05.143Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_19ffaace-59f4-40e5-9359-319164d8f090",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T18:39:05.234Z",
+          "description": "Rank #2 prize for match TNXK9L"
+        },
+        {
+          "id": "tx_61f58664-b56c-4b74-8113-da6d064e4a1d",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:39:05.144Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_e7619102": {
+      "id": "bot_e7619102",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:40:48.392Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_8debc5ad-762f-40ed-8c57-4a3c1c29ea60",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:40:48.394Z",
+          "description": "Rank #1 prize for match ZJ2GC2"
+        },
+        {
+          "id": "tx_3348f5fc-66fd-4ee8-ab1c-d2ea90381d26",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:40:48.392Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_39e848cf": {
+      "id": "bot_39e848cf",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T18:40:48.395Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_5b7b8379-2211-4bf6-aea5-5b11f6409334",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T18:40:48.396Z",
+          "description": "Rank #2 prize for match ZJ2GC2"
+        },
+        {
+          "id": "tx_828a21ba-8b64-497b-83cd-95fcd9ce9032",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:40:48.395Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_3e131171": {
+      "id": "bot_3e131171",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:44:27.099Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_0ce5fb1c-72fb-4c45-82ab-47cc5f984fda",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:44:27.102Z",
+          "description": "Rank #1 prize for match 2G3CBW"
+        },
+        {
+          "id": "tx_9c460d8b-1ded-40b8-be34-4f5bb8d91f63",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:44:27.100Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_746c780f": {
+      "id": "bot_746c780f",
+      "name": "Guest",
+      "coins": 1160,
+      "createdAt": "2026-09-20T18:44:27.104Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 0,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_07765a32-b775-4da5-b4b9-85f2aea84c79",
+          "type": "MATCH_WINNINGS",
+          "amount": 160,
+          "balanceAfter": 1160,
+          "timestamp": "2026-09-20T18:44:27.106Z",
+          "description": "Rank #2 prize for match 2G3CBW"
+        },
+        {
+          "id": "tx_1a3c322e-f5a6-4573-835e-5580fb8a0f03",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:44:27.104Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    },
+    "bot_45919b2b": {
+      "id": "bot_45919b2b",
+      "name": "Guest",
+      "coins": 1240,
+      "createdAt": "2026-09-20T18:47:08.780Z",
+      "lastBonusClaim": null,
+      "stats": {
+        "gamesPlayed": 1,
+        "gamesWon": 1,
+        "totalScore": 0
+      },
+      "transactions": [
+        {
+          "id": "tx_f588d4b7-1db0-43e2-b6c2-d5e7d770292d",
+          "type": "MATCH_WINNINGS",
+          "amount": 240,
+          "balanceAfter": 1240,
+          "timestamp": "2026-09-20T18:47:08.784Z",
+          "description": "Rank #1 prize for match VXFX2R"
+        },
+        {
+          "id": "tx_9a7124af-5494-493c-9e41-3eb45a9be828",
+          "type": "WELCOME_BONUS",
+          "amount": 1000,
+          "balanceAfter": 1000,
+          "timestamp": "2026-09-20T18:47:08.780Z",
+          "description": "Welcome bonus (Virtual Coins only - no real money value)"
+        }
+      ]
+    }
+  },
+  "processedTransactions": [
+    "stake:IXM04K:u1",
+    "stake:IXM04K:u2",
+    "stake:IBHMTU:u1_1789921039532",
+    "stake:IBHMTU:u2_1789921039532",
+    "stake:7PFJLD:u1_1789921384254",
+    "stake:7PFJLD:u2_1789921384254",
+    "stake:5NF8TT:user_7youh2dd",
+    "stake:Y705AQ:user_7youh2dd",
+    "reward:5NF8TT:bot_08741cd3",
+    "reward:5NF8TT:bot_585bdc7b",
+    "reward:Y705AQ:bot_ae3a584b",
+    "reward:Y705AQ:bot_88964388",
+    "stake:LF8ZER:user_7youh2dd",
+    "stake:565GRK:user_7youh2dd",
+    "reward:LF8ZER:bot_3ce51470",
+    "reward:LF8ZER:bot_b360d6f2",
+    "reward:565GRK:bot_c842354a",
+    "reward:565GRK:bot_3b2924ba",
+    "stake:JRMJN3:user_7youh2dd",
+    "reward:JRMJN3:bot_d435dfda",
+    "reward:JRMJN3:bot_cd5e34ba",
+    "stake:E1YM4Y:user_7youh2dd",
+    "reward:E1YM4Y:user_7youh2dd",
+    "reward:E1YM4Y:bot_0aba5d42",
+    "stake:9KS8CJ:user_7youh2dd",
+    "stake:N4DC7L:user_7youh2dd",
+    "reward:9KS8CJ:bot_4d37779b",
+    "reward:9KS8CJ:bot_119175c2",
+    "stake:GFDGQS:user_7youh2dd",
+    "reward:N4DC7L:bot_4ddf2c60",
+    "reward:N4DC7L:user_7youh2dd",
+    "reward:GFDGQS:bot_4aa1c73a",
+    "reward:GFDGQS:bot_2dd7380a",
+    "stake:SW2XQN:user_7youh2dd",
+    "reward:SW2XQN:bot_6c3d957f",
+    "reward:SW2XQN:bot_8185b6c3",
+    "stake:C5J7JJ:user_7youh2dd",
+    "stake:5M0XNK:user_7youh2dd",
+    "reward:C5J7JJ:user_7youh2dd",
+    "reward:C5J7JJ:bot_f20828e8",
+    "reward:5M0XNK:bot_76e792d9",
+    "reward:5M0XNK:user_7youh2dd",
+    "stake:0KXGVV:user_7youh2dd",
+    "reward:0KXGVV:bot_aa054a76",
+    "reward:0KXGVV:bot_d57fac16",
+    "stake:WJFOOA:user_7youh2dd",
+    "stake:KAOBXT:user_7youh2dd",
+    "reward:WJFOOA:bot_f6b21a7b",
+    "reward:WJFOOA:user_7youh2dd",
+    "stake:GH8URK:user_dqy4up29",
+    "stake:PH84LI:user_dqy4up29",
+    "reward:GH8URK:bot_c4b5ab8c",
+    "reward:GH8URK:bot_5c3f4b01",
+    "stake:CFQREC:user_dqy4up29",
+    "reward:PH84LI:bot_8396621c",
+    "reward:PH84LI:user_dqy4up29",
+    "reward:KAOBXT:bot_d557573f",
+    "reward:KAOBXT:bot_cfcd5383",
+    "stake:ZVIZ2Q:user_dqy4up29",
+    "reward:CFQREC:user_dqy4up29",
+    "reward:CFQREC:bot_1209f2c4",
+    "reward:ZVIZ2Q:bot_6c9b059a",
+    "reward:ZVIZ2Q:bot_da4ee672",
+    "stake:BOG50Y:u1_1789927061539",
+    "stake:BOG50Y:u2_1789927061539",
+    "stake:708FAJ:u1_1789927303476",
+    "stake:708FAJ:u2_1789927303476",
+    "stake:NVOR28:user_dqy4up29",
+    "stake:POLCIT:user_dqy4up29",
+    "reward:NVOR28:bot_280c8dec",
+    "reward:NVOR28:bot_dc03e72f",
+    "reward:POLCIT:bot_7ba2d71e",
+    "reward:POLCIT:user_dqy4up29",
+    "stake:SCPGD3:u1_1789929353430",
+    "stake:SCPGD3:u2_1789929353430",
+    "stake:TEHNAS:u1_1789929365782",
+    "stake:TEHNAS:u2_1789929365782",
+    "stake:TNXK9L:user_dqy4up29",
+    "reward:TNXK9L:bot_4bf6e1da",
+    "reward:TNXK9L:bot_363e8b93",
+    "stake:ZJ2GC2:user_7youh2dd",
+    "reward:ZJ2GC2:bot_e7619102",
+    "reward:ZJ2GC2:bot_39e848cf",
+    "stake:2G3CBW:user_dqy4up29",
+    "reward:2G3CBW:bot_3e131171",
+    "reward:2G3CBW:bot_746c780f",
+    "stake:VXFX2R:user_dqy4up29",
+    "reward:VXFX2R:bot_45919b2b",
+    "reward:VXFX2R:user_dqy4up29"
+  ]
+}

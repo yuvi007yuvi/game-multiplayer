@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#182330"/>
+      <stop offset="85%" stop-color="#0b0f14"/>
+      <stop offset="100%" stop-color="#05080c"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#eab308" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.6"/>
+
+  <!-- Spade Emblem -->
+  <g filter="url(#goldGlow)">
+    <path fill="url(#goldGrad)" d="M256 70 C190 170 120 230 120 310 C120 375 170 425 235 425 C243 425 250 423 256 420 C262 423 269 425 277 425 C342 425 392 375 392 310 C392 230 322 170 256 70 Z"/>
+    <path fill="url(#goldGrad)" d="M246 390 L266 390 L290 450 L222 450 Z"/>
+  </g>
+</svg>

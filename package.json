@@ -1,0 +1,25 @@
+{
+  "name": "call-break-arena",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Production-Grade 4-Player Multiplayer Call Break Card Game",
+  "scripts": {
+    "dev": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "start": "npm --prefix server start",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "test": "node --test server/tests/*.test.js",
+    "build": "npm --prefix client run build"
+  },
+  "keywords": [
+    "call-break",
+    "card-game",
+    "multiplayer",
+    "socketio",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}
