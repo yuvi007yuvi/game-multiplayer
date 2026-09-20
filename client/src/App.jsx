@@ -6,6 +6,9 @@ import { LobbyPage } from './pages/LobbyPage.jsx';
 import { GamePage } from './pages/GamePage.jsx';
 import { RulesModal } from './components/modals/RulesModal.jsx';
 import { ProfileModal } from './components/modals/ProfileModal.jsx';
+import { LoadingScreen } from './components/common/LoadingScreen.jsx';
+import { OnboardingModal } from './components/modals/OnboardingModal.jsx';
+import { hasUserOnboarded, markUserOnboarded } from './services/storage.js';
 import { soundEngine } from './services/soundEngine.js';
 import { AlertCircle, X } from 'lucide-react';
 
@@ -36,6 +39,8 @@ export function App() {
     leaveRoom
   } = useSocket();
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(() => !hasUserOnboarded());
   const [rulesOpen, setRulesOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [soundOn, setSoundOn] = useState(true);
@@ -45,12 +50,29 @@ export function App() {
     setSoundOn(newState);
   };
 
+  const handleOnboardingComplete = ({ name, avatar }) => {
+    markUserOnboarded();
+    updateProfile(name, avatar);
+    setShowOnboarding(false);
+  };
+
   // Determine current active page view
   const isInGame = gameState && gameState.phase !== 'LOBBY';
   const isInLobby = lobbyState && !isInGame;
 
   return (
     <div className="min-h-screen min-h-[100dvh] flex flex-col bg-[#0b0f14] text-slate-100 font-sans selection:bg-amber-400 selection:text-black">
+      {/* 1. Cinematic Loading Screen on Initial Boot */}
+      {isLoading && (
+        <LoadingScreen onFinish={() => setIsLoading(false)} minDurationMs={1200} />
+      )}
+
+      {/* 2. First-Time Player Onboarding Modal */}
+      <OnboardingModal
+        isOpen={!isLoading && showOnboarding}
+        onComplete={handleOnboardingComplete}
+      />
+
       {/* Top App Navbar */}
       <Navbar
         userProfile={userProfile}

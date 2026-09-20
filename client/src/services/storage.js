@@ -6,7 +6,8 @@ const STORAGE_KEYS = {
   USER_ID: 'cb_arena_userId',
   USER_NAME: 'cb_arena_userName',
   AVATAR: 'cb_arena_avatar',
-  SOUND_ENABLED: 'cb_arena_sound'
+  SOUND_ENABLED: 'cb_arena_sound',
+  ONBOARDED: 'cb_arena_onboarded'
 };
 
 export const AVATARS = [
@@ -14,9 +15,40 @@ export const AVATARS = [
   { id: 'lion', icon: '🦁', label: 'Lion' },
   { id: 'falcon', icon: '🦅', label: 'Falcon' },
   { id: 'wolf', icon: '🐺', label: 'Wolf' },
+  { id: 'dragon', icon: '🐉', label: 'Dragon' },
   { id: 'fox', icon: '🦊', label: 'Fox' },
-  { id: 'dragon', icon: '🐉', label: 'Dragon' }
+  { id: 'king', icon: '👑', label: 'Emperor' },
+  { id: 'thunder', icon: '⚡', label: 'Thunder' }
 ];
+
+export const COOL_NAMES = [
+  'ShadowSpade',
+  'AceViper',
+  'NeonWolf',
+  'CardShark',
+  'RoyalFlush',
+  'ThunderAce',
+  'SilentHawk',
+  'MysticFox',
+  'BlazeSpade',
+  'CyberKing',
+  'SpadeMaster',
+  'PhantomPlayer'
+];
+
+export function getRandomCoolName() {
+  const base = COOL_NAMES[Math.floor(Math.random() * COOL_NAMES.length)];
+  const num = Math.floor(10 + Math.random() * 90);
+  return `${base}_${num}`;
+}
+
+export function hasUserOnboarded() {
+  return localStorage.getItem(STORAGE_KEYS.ONBOARDED) === 'true';
+}
+
+export function markUserOnboarded() {
+  localStorage.setItem(STORAGE_KEYS.ONBOARDED, 'true');
+}
 
 export function getStoredUser() {
   let userId = localStorage.getItem(STORAGE_KEYS.USER_ID);
@@ -27,8 +59,7 @@ export function getStoredUser() {
 
   let name = localStorage.getItem(STORAGE_KEYS.USER_NAME);
   if (!name) {
-    const randomSuffix = Math.floor(100 + Math.random() * 900);
-    name = `Player ${randomSuffix}`;
+    name = getRandomCoolName();
     localStorage.setItem(STORAGE_KEYS.USER_NAME, name);
   }
 
