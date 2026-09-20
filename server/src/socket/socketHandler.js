@@ -415,17 +415,63 @@ export function setupSocketHandlers(io) {
     // 13. Next Round / Rematch
     socket.on(SOCKET_EVENTS.GAME_REMATCH, (_, callback) => {
       const room = roomManager.getRoom(currentRoomCode);
-      if (!room || !room.game) return;
+      if (!room) return;
 
-      if (room.game.phase === GAME_PHASES.ROUND_END) {
-        room.game.startRound();
-        broadcastGameState(room);
-        scheduleTurnAction(room);
-      } else if (room.game.phase === GAME_PHASES.MATCH_END) {
+      try {
+        if (room.game && room.game.phase === GAME_PHASES.ROUND_END) {
+          // Advance to next round within the current match
+          room.game.startRound();
+          broadcastGameState(room);
+          scheduleTurnAction(room);
+          if (typeof callback === 'function') callback({ success: true });
+        } else if (!room.game || room.game.phase === GAME_PHASES.MATCH_END) {
+          // Start a brand-new match with the same seats/bots
+          // Mark all seats ready so canStart() passes
+          room.seats.forEach(s => { if (s) s.ready = true; });
+
+          // Auto-top-up any human player below tableStake
+          for (const seat of room.seats) {
+            if (seat && !seat.isBot) {
+              const user = coinService.getUser(seat.id);
+              if (user && user.coins < room.tableStake) {
+                coinService.claimBonus(seat.id);
+              }
+            }
+          }
+
+          room.status = 'LOBBY'; // startGame() requires LOBBY status to deduct stakes
+          room.startGame();      // Deducts stakes, creates new CallBreakGame, starts Round 1
+          broadcastGameState(room);
+          scheduleTurnAction(room);
+          if (typeof callback === 'function') callback({ success: true });
+        }
+      } catch (err) {
+        // Graceful fallback – return all players to the lobby
         room.status = 'LOBBY';
         room.game = null;
         broadcastLobbyState(room);
+        io.to(room.code).emit(SOCKET_EVENTS.GAME_STATE, null);
+        if (typeof callback === 'function') callback({ success: false, error: err.message });
       }
+    });
+
+    // 13b. Room Leave (voluntary)
+    socket.on(SOCKET_EVENTS.ROOM_LEAVE, (_, callback) => {
+      if (!currentRoomCode) {
+        if (typeof callback === 'function') callback({ success: true });
+        return;
+      }
+      const room = roomManager.getRoom(currentRoomCode);
+      if (room) {
+        room.removePlayer(currentUserId);
+        socket.leave(currentRoomCode);
+        broadcastLobbyState(room);
+        if (room.status === 'PLAYING') {
+          broadcastGameState(room);
+          scheduleTurnAction(room);
+        }
+      }
+      currentRoomCode = null;
       if (typeof callback === 'function') callback({ success: true });
     });
 

@@ -16,7 +16,7 @@ export function Navbar({
   const isBonusAvailable = !lastClaim || (Date.now() - lastClaim >= 24 * 60 * 60 * 1000);
 
   return (
-    <header className="w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-3 sm:px-4 py-1.5 sm:py-2.5 flex items-center justify-between sticky top-0 z-40 select-none">
+    <header className="w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-3 sm:px-4 py-1.5 landscape:py-0.5 sm:py-2.5 flex items-center justify-between sticky top-0 z-40 select-none landscape:min-h-[36px]">
       {/* Brand Logo */}
       <div className="flex items-center gap-1.5 sm:gap-2">
         <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-black font-serif text-base sm:text-lg font-black shadow-glow-gold">

@@ -14,7 +14,7 @@ export function RoundResultModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in select-none">
-      <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-amber-500/40 p-6 shadow-2xl modal-enter">
+      <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-amber-500/40 p-6 shadow-2xl modal-enter max-h-[92dvh] overflow-y-auto">
         {/* Header */}
         <div className="text-center mb-5">
           <span className="inline-block p-2 rounded-full bg-amber-500/10 text-amber-400 mb-2 border border-amber-500/20">

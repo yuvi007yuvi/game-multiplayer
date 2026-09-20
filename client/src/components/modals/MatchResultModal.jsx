@@ -24,7 +24,7 @@ export function MatchResultModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in select-none">
-      <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-yellow-400/50 p-6 shadow-2xl text-center modal-enter">
+      <div className="relative w-full max-w-md rounded-2xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-yellow-400/50 p-6 shadow-2xl text-center modal-enter max-h-[92dvh] overflow-y-auto">
         {/* Trophy icon */}
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black shadow-glow-gold mb-3 animate-bounce">
           <Trophy size={36} />

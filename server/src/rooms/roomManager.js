@@ -13,6 +13,7 @@ export class Room {
     this.totalRounds = totalRounds;
     this.status = 'LOBBY'; // 'LOBBY', 'PLAYING', 'FINISHED'
     this.createdAt = Date.now();
+    this.matchNumber = 0; // incremented each time a new match starts (for unique stake tx keys)
 
     // 4 seats (0: South/Host, 1: West, 2: North, 3: East)
     this.seats = [null, null, null, null];
@@ -139,10 +140,13 @@ export class Room {
       throw new Error('All 4 seats must be occupied and players must be ready.');
     }
 
+    this.matchNumber += 1;
+    const matchId = `${this.code}_${this.matchNumber}`;
+
     // Deduct entry stakes for human players
     for (const seat of this.seats) {
       if (!seat.isBot) {
-        const deduction = coinService.deductStake(seat.id, this.tableStake, this.code);
+        const deduction = coinService.deductStake(seat.id, this.tableStake, matchId);
         if (!deduction.success) {
           throw new Error(`${seat.name} has insufficient coins (${deduction.balance} < ${this.tableStake}).`);
         }
@@ -151,7 +155,7 @@ export class Room {
 
     this.status = 'PLAYING';
     this.game = new CallBreakGame({
-      id: this.code,
+      id: matchId,
       players: this.seats.map(s => ({ ...s })),
       totalRounds: this.totalRounds
     });

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { PlayerSeat } from '../components/table/PlayerSeat.jsx';
 import { TrickCenter } from '../components/table/TrickCenter.jsx';
 import { HandFan } from '../components/table/HandFan.jsx';
@@ -6,7 +6,7 @@ import { BiddingSlider } from '../components/table/BiddingSlider.jsx';
 import { EmotePicker } from '../components/table/EmotePicker.jsx';
 import { RoundResultModal } from '../components/modals/RoundResultModal.jsx';
 import { MatchResultModal } from '../components/modals/MatchResultModal.jsx';
-import { Table, Award, ShieldAlert, RotateCcw, ArrowLeft, Smile } from 'lucide-react';
+import { Table, Award, ShieldAlert, RotateCcw, ArrowLeft, Smile, Maximize2, Minimize2 } from 'lucide-react';
 import { GAME_PHASES } from '@shared/constants.js';
 import { haptics } from '../services/haptics.js';
 
@@ -24,7 +24,23 @@ export function GamePage({
 }) {
   const [showScoreboard, setShowScoreboard] = useState(false);
   const [emotePickerOpen, setEmotePickerOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const isPlayingCardRef = useRef(false);
+
+  const toggleFullscreen = useCallback(async () => {
+    try {
+      if (!document.fullscreenElement) {
+        await document.documentElement.requestFullscreen();
+        await screen.orientation?.lock('landscape').catch(() => {});
+        setIsFullscreen(true);
+      } else {
+        await document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    } catch {
+      // fullscreen not supported — ignore silently
+    }
+  }, []);
 
   if (!gameState) {
     return (
@@ -75,7 +91,7 @@ export function GamePage({
   };
 
   return (
-    <div className="relative w-full h-[calc(100dvh-48px)] sm:h-[calc(100vh-56px)] max-h-[calc(100dvh-48px)] sm:max-h-[calc(100vh-56px)] flex flex-col justify-between select-none overflow-hidden pb-0.5 sm:pb-1">
+    <div className="relative w-full h-[calc(100dvh-48px)] sm:h-[calc(100vh-56px)] landscape:h-[calc(100dvh-36px)] max-h-[calc(100dvh-48px)] sm:max-h-[calc(100vh-56px)] landscape:max-h-[calc(100dvh-36px)] flex flex-col justify-between select-none overflow-hidden pb-0.5 sm:pb-1">
       {/* Game Table Info Bar (Slim) */}
       <div className="w-full max-w-5xl mx-auto px-2 sm:px-4 py-0.5 sm:py-1 flex items-center justify-between text-xs sm:text-sm font-semibold shrink-0">
         {/* Left: Round & Trick info */}
@@ -94,20 +110,31 @@ export function GamePage({
           <span>Spades are Trump</span>
         </div>
 
-        {/* Right: Scoreboard Drawer Toggle */}
-        <button
-          type="button"
-          onClick={() => setShowScoreboard(!showScoreboard)}
-          className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] sm:text-xs transition-colors"
-        >
-          <Award size={12} className="text-amber-400" />
-          <span>Scores</span>
-        </button>
+        {/* Right: Fullscreen toggle (mobile only) + Scoreboard */}
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={toggleFullscreen}
+            className="sm:hidden flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] transition-colors active:scale-90"
+            title={isFullscreen ? 'Exit Fullscreen' : 'Landscape Fullscreen'}
+          >
+            {isFullscreen ? <Minimize2 size={11} className="text-amber-400" /> : <Maximize2 size={11} className="text-amber-400" />}
+            <span>{isFullscreen ? 'Exit' : 'Full'}</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setShowScoreboard(!showScoreboard)}
+            className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-[10px] sm:text-xs transition-colors"
+          >
+            <Award size={12} className="text-amber-400" />
+            <span>Scores</span>
+          </button>
+        </div>
       </div>
 
       {/* Main Oval Table Felt Surface (Auto-flexing to screen height) */}
       <div className="relative flex-1 min-h-0 w-full max-w-5xl mx-auto px-1 sm:px-6 flex items-center justify-center my-0.5">
-        <div className="relative w-full h-full max-h-[290px] sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 shadow-table flex flex-col justify-between items-center">
+        <div className="relative w-full h-full max-h-[290px] landscape:max-h-[185px] landscape:sm:max-h-[340px] sm:max-h-[395px] md:max-h-[420px] rounded-[32px] sm:rounded-[44px] table-rail p-1.5 sm:p-3 shadow-table flex flex-col justify-between items-center">
           {/* Felt Inner Surface */}
           <div className="relative w-full h-full rounded-[26px] sm:rounded-[34px] felt-surface p-1 sm:p-2 flex flex-col justify-between items-center border border-felt-border">
 
@@ -126,7 +153,7 @@ export function GamePage({
             {/* Middle Row: West Seat, Center Trick, East Seat */}
             <div className="w-full flex items-center justify-between px-1 sm:px-4 z-10">
               {/* West Opponent (Left) */}
-              <div className="w-13 sm:w-36 flex justify-start shrink-0">
+              <div className="w-13 landscape:w-28 sm:w-36 flex justify-start shrink-0">
                 <PlayerSeat
                   player={westPlayer}
                   isCurrentTurn={westPlayer && westPlayer.seatIndex === currentTurn}
@@ -148,7 +175,7 @@ export function GamePage({
               </div>
 
               {/* East Opponent (Right) */}
-              <div className="w-13 sm:w-36 flex justify-end shrink-0">
+              <div className="w-13 landscape:w-28 sm:w-36 flex justify-end shrink-0">
                 <PlayerSeat
                   player={eastPlayer}
                   isCurrentTurn={eastPlayer && eastPlayer.seatIndex === currentTurn}

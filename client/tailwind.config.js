@@ -43,5 +43,10 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    // Enable landscape: variant for mobile orientation-specific styles
+    function({ addVariant }) {
+      addVariant('landscape', '@media (orientation: landscape)');
+    }
+  ],
 }

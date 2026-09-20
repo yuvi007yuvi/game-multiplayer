@@ -47,10 +47,27 @@ export function useSocket() {
 
     socket.on(SOCKET_EVENTS.ROOM_UPDATE, (lobby) => {
       setLobbyState(lobby);
+      // If server transitions us back to LOBBY (e.g. rematch error fallback), clear game state
+      if (lobby?.status === 'LOBBY') {
+        setGameState(null);
+        setRoundResult(null);
+        setMatchResult(null);
+        setLastTrickResult(null);
+      }
     });
 
     socket.on(SOCKET_EVENTS.GAME_STATE, (state) => {
+      if (!state) {
+        // Server explicitly reset game state (e.g. rematch error fallback)
+        setGameState(null);
+        return;
+      }
       setGameState(state);
+      // Clear stale round/match result modals when a fresh round begins
+      if (state.phase === 'BIDDING') {
+        setRoundResult(null);
+        setMatchResult(null);
+      }
       // Play alert and haptics if it's currently my turn
       if (state.phase === 'PLAYING' && state.currentTurn === state.mySeatIndex) {
         soundEngine.playTurnAlert();
@@ -210,6 +227,9 @@ export function useSocket() {
   }, []);
 
   const leaveRoom = useCallback(() => {
+    // Notify server to remove player from room
+    socketRef.current?.emit(SOCKET_EVENTS.ROOM_LEAVE, {}, () => {});
+    // Clear local state
     setLobbyState(null);
     setGameState(null);
     setLastTrickResult(null);

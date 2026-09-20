@@ -174,7 +174,7 @@ export function HandFan({
   const overlapClass = getOverlapClass(cards.length);
 
   return (
-    <div className="relative w-full flex flex-col items-center select-none pt-0.5 pb-0.5 sm:pb-1">
+    <div className="relative w-full flex flex-col items-center select-none pt-0.5 pb-0.5 sm:pb-1 landscape:scale-[0.82] landscape:origin-bottom">
       {/* Floating Swipe Play Drop Zone Indicator */}
       {dragState && (
         <div
@@ -189,8 +189,8 @@ export function HandFan({
         </div>
       )}
 
-      {/* Hand status header */}
-      <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1 z-10">
+      {/* Hand status header — hidden in landscape to save vertical space */}
+      <div className="flex items-center gap-1.5 sm:gap-2 mb-0.5 sm:mb-1 z-10 landscape:hidden">
         <span className="text-[11px] sm:text-xs font-semibold text-slate-300">
           Your Cards ({cards.length})
         </span>
@@ -202,7 +202,7 @@ export function HandFan({
       </div>
 
       {/* Cards container: clean horizontal fan with hover elevation and drag physics */}
-      <div className="relative flex justify-center items-end max-w-full px-1 sm:px-6 overflow-x-auto pt-2 sm:pt-4 pb-0.5 sm:pb-1 scrollbar-none">
+      <div className="relative flex justify-center items-end max-w-full px-1 sm:px-6 overflow-x-auto pt-1 landscape:pt-0 sm:pt-4 pb-0.5 sm:pb-1 scrollbar-none">
         <div className={`flex items-end ${overlapClass} px-2 sm:px-8 py-1 sm:py-2`}>
           {cards.map((card, idx) => {
             const isLegal = legalMoves.includes(card.id);
