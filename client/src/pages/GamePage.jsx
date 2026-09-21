@@ -316,13 +316,13 @@ export function GamePage({
         {/* --- Table Elements --- */}
 
         {/* Trick Center (Dead Center) */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
           <TrickCenter
             currentTrick={currentTrick}
             lastTrick={lastTrick}
             seats={seats}
             mySeatIndex={mySeatIndex}
-            scale={1.2}
+            scale={1.05}
           />
         </div>
 
@@ -366,64 +366,71 @@ export function GamePage({
           />
         </div>
 
-        {/* --- Bottom Area: Player Info & Hand --- */}
-        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-auto flex flex-col items-center">
-          {/* Bidding Slider or Player Info */}
-          <div className="w-full flex justify-center mb-1 px-4 max-w-4xl">
-             {isBiddingTurn ? (
-                <div className="bg-slate-900/90 p-2 rounded-xl border border-slate-700 shadow-2xl backdrop-blur-md">
-                  <BiddingSlider myHand={myHand} onSubmitBid={onSubmitBid} />
+        {/* --- Bottom Left: Player Info --- */}
+        {!isBiddingTurn && (
+          <div className="absolute bottom-4 left-4 z-30 pointer-events-auto flex items-center gap-3 bg-slate-900/80 border border-slate-700/50 backdrop-blur-sm rounded-2xl px-3 py-1.5 shadow-lg">
+            {/* Avatar & Name */}
+            <div className="flex items-center gap-2">
+              <div className="relative w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black font-bold flex items-center justify-center shadow-lg">
+                <span className="text-sm">👤</span>
+                {southPlayer?.isDealer && (
+                  <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-amber-400 text-black font-black text-[8px] flex items-center justify-center border border-slate-900 shadow">D</span>
+                )}
+              </div>
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1">
+                  <span className="text-xs font-black text-slate-100">{southPlayer?.name || 'You'}</span>
+                  <span className="text-[7px] bg-amber-400 text-black font-extrabold px-1 rounded uppercase shadow-sm">YOU</span>
                 </div>
-              ) : (
-                <div className="flex items-center justify-between w-full max-w-2xl bg-slate-900/80 border border-slate-700/50 backdrop-blur-sm rounded-2xl px-4 py-2 shadow-lg mb-2">
-                  {/* Left: Avatar & Name */}
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-yellow-300 text-black font-bold flex items-center justify-center shadow-lg">
-                      <span className="text-lg">👤</span>
-                      {southPlayer?.isDealer && (
-                        <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-400 text-black font-black text-[10px] flex items-center justify-center border border-slate-900 shadow">D</span>
-                      )}
-                    </div>
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-sm font-black text-slate-100">{southPlayer?.name || 'You'}</span>
-                        <span className="text-[9px] bg-amber-400 text-black font-extrabold px-1.5 rounded uppercase shadow-sm">YOU</span>
-                      </div>
-                      <span className="text-xs text-slate-300 font-medium">Score: <strong className="text-amber-400">{southPlayer?.matchScore ?? 0} pts</strong></span>
-                    </div>
-                  </div>
+                <span className="text-[10px] text-slate-300 font-medium">Score: <strong className="text-amber-400">{southPlayer?.matchScore ?? 0}</strong></span>
+              </div>
+            </div>
 
-                  {/* Center: Bid & Won */}
-                  <div className="flex items-center gap-3">
-                    <div className="bg-black/40 px-3 py-1.5 rounded-xl border border-slate-700/50 flex flex-col items-center min-w-[60px]">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Call</span>
-                      <span className="font-black text-amber-400 text-lg leading-none">
-                        {southPlayer?.bid !== null && southPlayer?.bid !== undefined ? southPlayer.bid : (phase === GAME_PHASES.BIDDING ? '-' : '-')}
-                      </span>
-                    </div>
-                    <div className="bg-black/40 px-3 py-1.5 rounded-xl border border-slate-700/50 flex flex-col items-center min-w-[60px]">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Won</span>
-                      <span className="font-black text-emerald-400 text-lg leading-none">{southPlayer?.tricksWon ?? 0}</span>
-                    </div>
-                  </div>
+            <div className="w-px h-6 bg-slate-700/50 mx-1"></div>
 
-                  {/* Right: Actions */}
-                  <div className="flex items-center gap-3">
-                    <button type="button" onClick={() => setEmotePickerOpen(true)}
-                      className="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-amber-300 border border-slate-600 transition-all active:scale-90 shadow-md">
-                      <Smile size={20} />
-                    </button>
-                    {isMyTurn ? (
-                      <div className="bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.5)] animate-pulse">Your Turn</div>
-                    ) : (
-                      <div className="text-xs text-slate-300 font-medium bg-black/50 px-4 py-1.5 rounded-full border border-slate-700/50 shadow-inner">
-                        {phase === GAME_PHASES.BIDDING ? `${seats[currentTurn]?.name || 'Player'} calling...` : `${seats[currentTurn]?.name || 'Player'}'s turn`}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
+            {/* Bid & Won */}
+            <div className="flex items-center gap-2">
+              <div className="flex flex-col items-center">
+                <span className="text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Call</span>
+                <span className="font-black text-amber-400 text-sm leading-none">
+                  {southPlayer?.bid !== null && southPlayer?.bid !== undefined ? southPlayer.bid : (phase === GAME_PHASES.BIDDING ? '-' : '-')}
+                </span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-[8px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Won</span>
+                <span className="font-black text-emerald-400 text-sm leading-none">{southPlayer?.tricksWon ?? 0}</span>
+              </div>
+            </div>
           </div>
+        )}
+
+        {/* --- Bottom Right: Actions --- */}
+        {!isBiddingTurn && (
+          <div className="absolute bottom-4 right-4 z-30 pointer-events-auto flex items-center gap-2">
+            <button type="button" onClick={() => setEmotePickerOpen(true)}
+              className="p-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-amber-300 border border-slate-600 transition-all active:scale-90 shadow-md">
+              <Smile size={18} />
+            </button>
+            {isMyTurn ? (
+              <div className="bg-gradient-to-r from-amber-400 to-yellow-300 text-black px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-[0_0_15px_rgba(251,191,36,0.5)] animate-pulse">Your Turn</div>
+            ) : (
+              <div className="text-[10px] text-slate-300 font-medium bg-black/50 px-3 py-1 rounded-full border border-slate-700/50 shadow-inner max-w-[120px] truncate">
+                {phase === GAME_PHASES.BIDDING ? `${seats[currentTurn]?.name || 'Player'} calling...` : `${seats[currentTurn]?.name || 'Player'}'s turn`}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* --- Bottom Area: Hand Fan & Bidding Slider --- */}
+        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-auto flex flex-col items-center">
+          {/* Bidding Slider - only show when bidding */}
+          {isBiddingTurn && (
+            <div className="w-full flex justify-center mb-1 px-4 max-w-4xl">
+              <div className="bg-slate-900/90 p-2 rounded-xl border border-slate-700 shadow-2xl backdrop-blur-md">
+                <BiddingSlider myHand={myHand} onSubmitBid={onSubmitBid} />
+              </div>
+            </div>
+          )}
           
           {/* Full-width Hand Fan Container */}
           <div className="w-full px-2 pb-2">
