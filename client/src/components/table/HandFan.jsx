@@ -165,10 +165,10 @@ export function HandFan({
   // Dynamic responsive spacing based on card count
   // Keeps all 13 cards cleanly visible on 360px-390px mobile screens without clipping!
   const getOverlapClass = (count) => {
-    if (count <= 4) return 'space-x-1 sm:space-x-2 md:space-x-3';
-    if (count <= 7) return '-space-x-3 sm:-space-x-4 md:-space-x-5';
-    if (count <= 10) return '-space-x-5 sm:-space-x-6 md:-space-x-8';
-    return '-space-x-6 sm:-space-x-7 md:-space-x-9'; // 11-13 cards
+    if (count <= 4) return 'space-x-1 sm:space-x-2 md:space-x-3 landscape:space-x-2';
+    if (count <= 7) return '-space-x-3 sm:-space-x-4 md:-space-x-5 landscape:-space-x-1';
+    if (count <= 10) return '-space-x-5 sm:-space-x-6 md:-space-x-8 landscape:-space-x-3';
+    return '-space-x-6 sm:-space-x-7 md:-space-x-9 landscape:-space-x-5'; // 11-13 cards
   };
 
   const overlapClass = getOverlapClass(cards.length);
