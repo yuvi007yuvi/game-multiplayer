@@ -165,10 +165,10 @@ export function HandFan({
   // Dynamic responsive spacing based on card count
   // Keeps all 13 cards cleanly visible on 360px-390px mobile screens without clipping!
   const getOverlapClass = (count) => {
-    if (count <= 4) return 'space-x-1 sm:space-x-2 md:space-x-3 landscape:space-x-2';
-    if (count <= 7) return '-space-x-3 sm:-space-x-4 md:-space-x-5 landscape:-space-x-1';
-    if (count <= 10) return '-space-x-5 sm:-space-x-6 md:-space-x-8 landscape:-space-x-3';
-    return '-space-x-6 sm:-space-x-7 md:-space-x-9 landscape:-space-x-5'; // 11-13 cards
+    if (count <= 4) return 'space-x-1 sm:space-x-2 md:space-x-3 landscape:space-x-1';
+    if (count <= 7) return '-space-x-3 sm:-space-x-4 md:-space-x-5 landscape:-space-x-4';
+    if (count <= 10) return '-space-x-5 sm:-space-x-6 md:-space-x-8 landscape:-space-x-7';
+    return '-space-x-6 sm:-space-x-7 md:-space-x-9 landscape:-space-x-9'; // 11-13 cards
   };
 
   const overlapClass = getOverlapClass(cards.length);
@@ -178,11 +178,10 @@ export function HandFan({
       {/* Floating Swipe Play Drop Zone Indicator */}
       {dragState && (
         <div
-          className={`absolute -top-7 sm:-top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 px-3 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-wider transition-all duration-150 z-50 pointer-events-none drop-target-anim ${
-            dragState.isPastThreshold
+          className={`absolute -top-7 sm:-top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 px-3 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-wider transition-all duration-150 z-50 pointer-events-none drop-target-anim ${dragState.isPastThreshold
               ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-black shadow-glow-gold scale-105 ring-2 ring-yellow-200'
               : 'bg-slate-900/95 text-amber-300 border border-amber-400/50 backdrop-blur-md'
-          }`}
+            }`}
         >
           <span className="text-sm leading-none">▲</span>
           <span>{dragState.isPastThreshold ? 'Release to Play!' : 'Swipe up to play'}</span>
@@ -202,7 +201,7 @@ export function HandFan({
       </div>
 
       {/* Cards container: clean horizontal fan with hover elevation and drag physics */}
-      <div className="relative flex justify-center items-end max-w-full px-1 sm:px-6 overflow-x-auto pt-1 landscape:pt-0 sm:pt-4 pb-0.5 sm:pb-1 scrollbar-none">
+      <div className="relative flex justify-center items-end max-w-full px-1 sm:px-6 overflow-x-auto landscape:overflow-visible pt-1 landscape:pt-0 sm:pt-4 pb-0.5 sm:pb-1 scrollbar-none">
         <div className={`flex items-end ${overlapClass} px-2 sm:px-8 py-1 sm:py-2`}>
           {cards.map((card, idx) => {
             const isLegal = legalMoves.includes(card.id);
@@ -221,8 +220,8 @@ export function HandFan({
             const cardTransform = isDragging
               ? `translate3d(${dragState.x}px, ${dragState.y}px, 0) scale(${dragState.isPastThreshold ? 1.15 : 1.08}) rotate(${rotationDeg + dragState.x * 0.08}deg)`
               : isHovered
-              ? `translateY(-14px) scale(1.08)`
-              : `rotate(${rotationDeg}deg) translateY(${offsetY}px)`;
+                ? `translateY(-14px) scale(1.08)`
+                : `rotate(${rotationDeg}deg) translateY(${offsetY}px)`;
 
             const cardZIndex = isDragging ? 100 : isHovered ? 50 : idx + 10;
             const dragClass = isDragging ? 'card-drag-active' : 'card-spring-back transition-all duration-150';
